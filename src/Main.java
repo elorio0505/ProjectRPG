@@ -1,5 +1,8 @@
+import RPGGame.Controller.GameController;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Test!!");
+        GameController game = new GameController();
+        game.start("Test");
     }
 }
