@@ -1,8 +1,8 @@
 package RPGGame.Controller;
 
-import RPGGame.Entity.Player;
+import RPGGame.Entity.Abstracts.Player;
 
-// TODO complete implementation
+// TODO build a basic loop that allows for testing
 public class GameController {
     Player player;
     SceneController sceneControl;
@@ -10,7 +10,8 @@ public class GameController {
 
     public void start(String name) {
         player = new Player(name);
-        eventControl = new EventController();
         sceneControl = new SceneController(player);
+        // TODO: See if it's feasible to make the SceneController static, that'll be better so that any class can fuck with it
+        eventControl = new EventController();
     }
 }

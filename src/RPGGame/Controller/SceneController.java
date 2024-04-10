@@ -1,5 +1,5 @@
 package RPGGame.Controller;
-import RPGGame.Entity.Player;
+import RPGGame.Entity.Abstracts.Player;
 
 import javax.swing.*;
 import java.awt.*;
