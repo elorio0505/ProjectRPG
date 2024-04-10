@@ -5,8 +5,8 @@ import RPGGame.Helper.DamageType;
 // TODO complete implementation
 public abstract class Entity {
     // statistics
-    int maxLife, currentLife, physAttack, specAttack, physDefense, specDefense, speed, luck;
-    int maxLifeMod, physAttackMod, specAttackMod, physDefenseMod, specDefenseMod, speedMod, luckMod = 0;
+    public int maxLife, currentLife, physAttack, specAttack, physDefense, specDefense, speed, luck;
+    public int maxLifeMod, physAttackMod, specAttackMod, physDefenseMod, specDefenseMod, speedMod, luckMod = 0;
 
     public Entity() {
         maxLife = maxLifeValue();

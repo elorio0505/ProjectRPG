@@ -6,55 +6,55 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-//TODO Customize the GUI for this project, instead of just retrofitting an already-made one from a previous project
-public class SceneController {
-    Player player;
+//TODO Customize the GUI for this project, instead of just retrofitting an already-made one from a previous project - Add Stats window, make functional
+public final class SceneController {
+    static Player player;
+    private static boolean isStarted;
 
-    SceneController(Player player) {
-        this.player = player;
-        this.start();
-    }
+    public static void start(Player sPlayer) {
+        if (!isStarted) {
+            isStarted = true;
+            player = sPlayer;
+            // Create Frame
+            JFrame frame = new JFrame("ProjectRPG");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(500, 500);
+            frame.setResizable(false);
 
+            // Top Menu bar
+            JMenuBar mb = new JMenuBar();
+            JMenu m1 = new JMenu("Placeholder");
+            mb.add(m1);
 
-    public void start() {
+            // Bottom Panel
+            JPanel panel = new JPanel();
+            JTextField tf = new JTextField(30);
+            JButton send = new JButton("Send");
+            panel.add(tf);
+            panel.add(send);
 
-        // Create Frame
-        JFrame frame = new JFrame("ProjectRPG");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
-        frame.setResizable(false);
+            // Central Text Area
+            JTextArea ta = new JTextArea();
+            ta.setAutoscrolls(true);
+            ta.setLineWrap(true);
+            ta.setEditable(false);
+            ta.setWrapStyleWord(true);
+            ta.setAutoscrolls(true);
+            JScrollPane scroll = new JScrollPane(ta);
+            scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        // Top Menu bar
-        JMenuBar mb = new JMenuBar();
-        JMenu m1 = new JMenu("Placeholder");
-        mb.add(m1);
+            // Attach elements to frame
+            frame.getContentPane().add(BorderLayout.SOUTH, panel);
+            frame.getContentPane().add(BorderLayout.NORTH, mb);
+            frame.getContentPane().add(BorderLayout.CENTER, scroll);
 
-        // Bottom Panel
-        JPanel panel = new JPanel();
-        JTextField tf = new JTextField(30);
-        JButton send = new JButton("Send");
-        panel.add(tf);
-        panel.add(send);
+            // Connect Action Listeners
+            send.addActionListener(new sendActionListener(tf, ta, player));
 
-        // Central Text Area
-        JTextArea ta = new JTextArea();
-        ta.setAutoscrolls(true);
-        ta.setLineWrap(true);
-        ta.setEditable(false);
-        ta.setWrapStyleWord(true);
-        ta.setAutoscrolls(true);
-        JScrollPane scroll = new JScrollPane(ta);
-        scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-
-        // Attach elements to frame
-        frame.getContentPane().add(BorderLayout.SOUTH, panel);
-        frame.getContentPane().add(BorderLayout.NORTH, mb);
-        frame.getContentPane().add(BorderLayout.CENTER, scroll);
-
-        // Connect Action Listeners
-        send.addActionListener(new sendActionListener(tf, ta, player));
-
-        frame.setVisible(true);
+            frame.setVisible(true);
+        } else {
+            // Probably a good idea to throw an exception here, if the program attempts to run the SceneController twice
+        }
     }
 }
 
