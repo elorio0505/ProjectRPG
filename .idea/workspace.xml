@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Added basic structural abstract classes">
-      <change afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/EventReward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" afterDir="false" />
+    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Further compartmentalized code, started working on event implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/EventController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/EventReward.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,13 +102,31 @@
       <option name="project" value="LOCAL" />
       <updated>1712729992426</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Further compartmentalized code, started working on event implementation">
+      <created>1712759114642</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712759114642</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Added a bunch of classes and established relationships between them" />
     <MESSAGE value="Added basic structural abstract classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added basic structural abstract classes" />
+    <MESSAGE value="Further compartmentalized code, started working on event implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Further compartmentalized code, started working on event implementation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

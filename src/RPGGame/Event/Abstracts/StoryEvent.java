@@ -1,14 +1,42 @@
 package RPGGame.Event.Abstracts;
 
+import RPGGame.Controller.SceneController;
+import RPGGame.Entity.Abstracts.Player;
+
 import java.util.ArrayList;
 
 public abstract class StoryEvent extends Event {
-    // Defines the rewards that can be chosen from for the event. Not all of these values need to be used per event.
-    public EventReward positiveReward1;
-    public EventReward positiveReward2;
-    public EventReward negativeReward1;
-    public EventReward negativeReward2;
     public String eventText;
     //Array of choices
     public ArrayList<Choice> choices;
+
+    public StoryEvent() {
+        choices = new ArrayList<Choice>();
+    }
+
+    @Override
+    public boolean run(Player player) {
+        SceneController.gameTextAreaNewLine(eventText);
+        int i = 0;
+        for (Choice c : choices) {
+            SceneController.gameTextAreaNewLine("[" + ++i + "]  " + c.text);
+        }
+        String stale = SceneController.lastInput;
+        String nextInput = SceneController.lastInput;
+        int input = -1;
+        while (stale.equals(nextInput)) {
+            nextInput = SceneController.lastInput;
+            input = -1;
+            try {
+                input = Integer.parseInt(nextInput);
+            } catch (NumberFormatException e) {
+                // continue polling
+            }
+            if (input < 1 || input > i) {
+                stale = nextInput;
+            }
+        }
+        choices.get(input - 1).execute(player);
+        return true;
+    }
 }

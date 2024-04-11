@@ -1,53 +1,27 @@
 package RPGGame.Event.Concrete.StoryEvents;
 
+import RPGGame.Controller.SceneController;
 import RPGGame.Entity.Abstracts.Player;
 import RPGGame.Event.Abstracts.Choice;
-import RPGGame.Event.Abstracts.EventReward;
 import RPGGame.Event.Abstracts.StoryEvent;
 
 public class TestEvent extends StoryEvent {
 
     public TestEvent() {
+        super();
         eventText = "This is a test event.";
-        positiveReward1 = new EventReward() {
+        choices.add(new Choice("This is a good choice :)") {
             @Override
-            public void giveReward(Player player) {
-                player.luck += 1;
+            public void execute(Player player) {
+                SceneController.gameTextAreaNewLine("You made the right choice, gaining 1 Luck in the process!!! yippee!!");
             }
-        };
-        negativeReward1 = new EventReward() {
+        });
+        choices.add(new Choice("This is a bad choice :(") {
             @Override
-            public void giveReward(Player player) {
+            public void execute(Player player) {
+                SceneController.gameTextAreaNewLine("You fucking imbecile, you chose POORLY. now DIE.");
                 player.die();
             }
-        };
-        choices.add(new Choice() {
-            @Override
-            public void execute(Player player) {
-                positiveReward1.giveReward(player);
-            }
-
-            @Override
-            public void setText(String text) {
-                text = "This is a good choice :)";
-            }
         });
-        choices.add(new Choice() {
-            @Override
-            public void execute(Player player) {
-                negativeReward1.giveReward(player);
-            }
-
-            @Override
-            public void setText(String text) {
-                text = "This is a bad choice :(";
-            }
-        });
-    }
-
-    @Override
-    public boolean run() {
-        //TODO: Program events to do their thing
-        return false;
     }
 }

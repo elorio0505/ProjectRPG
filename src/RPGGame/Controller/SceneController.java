@@ -5,56 +5,76 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.io.InputStream;
 
 //TODO Customize the GUI for this project, instead of just retrofitting an already-made one from a previous project - Add Stats window, make functional
 public final class SceneController {
     static Player player;
+    public static String lastInput = "";
     private static boolean isStarted;
+    private static JFrame frame;
+    private static JMenuBar menuBar;
+    private static JMenu fileMenu;
+    private static JPanel bottomPanel;
+    private static JTextField userInputField;
+    private static JButton sendButton;
+    private static JTextArea gameTextArea;
+    private static JScrollPane gameTextAreaScrollbar;
 
     public static void start(Player sPlayer) {
         if (!isStarted) {
             isStarted = true;
             player = sPlayer;
-            // Create Frame
-            JFrame frame = new JFrame("ProjectRPG");
+
+            // CONSTRUCT GUI -------------------------------------------------------------------------------------------
+            // Construct Frame
+            frame = new JFrame("ProjectRPG");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(500, 500);
+            frame.setSize(1000, 1000);
             frame.setResizable(false);
 
-            // Top Menu bar
-            JMenuBar mb = new JMenuBar();
-            JMenu m1 = new JMenu("Placeholder");
-            mb.add(m1);
+            // Construct Top Menu Bar
+            menuBar = new JMenuBar();
+            fileMenu = new JMenu("File");
+            menuBar.add(fileMenu);
 
-            // Bottom Panel
-            JPanel panel = new JPanel();
-            JTextField tf = new JTextField(30);
-            JButton send = new JButton("Send");
-            panel.add(tf);
-            panel.add(send);
+            // Construct Bottom Panel
+            bottomPanel = new JPanel();
+            userInputField = new JTextField(60);
+            sendButton = new JButton("Send");
+            bottomPanel.add(userInputField);
+            bottomPanel.add(sendButton);
 
-            // Central Text Area
-            JTextArea ta = new JTextArea();
-            ta.setAutoscrolls(true);
-            ta.setLineWrap(true);
-            ta.setEditable(false);
-            ta.setWrapStyleWord(true);
-            ta.setAutoscrolls(true);
-            JScrollPane scroll = new JScrollPane(ta);
-            scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+            // Construct Central Text Area
+            gameTextArea = new JTextArea();
+            gameTextArea.setAutoscrolls(true);
+            gameTextArea.setLineWrap(true);
+            gameTextArea.setEditable(false);
+            gameTextArea.setWrapStyleWord(true);
+            gameTextArea.setAutoscrolls(true);
+            gameTextAreaScrollbar = new JScrollPane(gameTextArea);
+            gameTextAreaScrollbar.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
             // Attach elements to frame
-            frame.getContentPane().add(BorderLayout.SOUTH, panel);
-            frame.getContentPane().add(BorderLayout.NORTH, mb);
-            frame.getContentPane().add(BorderLayout.CENTER, scroll);
+            frame.getContentPane().add(BorderLayout.SOUTH, bottomPanel);
+            frame.getContentPane().add(BorderLayout.NORTH, menuBar);
+            frame.getContentPane().add(BorderLayout.CENTER, gameTextAreaScrollbar);
 
             // Connect Action Listeners
-            send.addActionListener(new sendActionListener(tf, ta, player));
+            sendButton.addActionListener(new sendActionListener(userInputField, gameTextArea, player));
 
+            // Turn on GUI
             frame.setVisible(true);
-        } else {
-            // Probably a good idea to throw an exception here, if the program attempts to run the SceneController twice
-        }
+        } // TODO: Throw an exception when trying to run an already-running SceneController.
+    }
+
+    public static void gameTextAreaClear() {
+        gameTextArea.setText("");
+    }
+
+    public static void gameTextAreaNewLine(String text) {
+        gameTextArea.append(text + "\n");
     }
 }
 
@@ -73,6 +93,7 @@ class sendActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String text = tf.getText();
         tf.setText("");
-        ta.append("[" + player.name + "]   " + text + "\n\n");
+        ta.append("\n>> " + text + "\n");
+        SceneController.lastInput = text;
     }
 }
