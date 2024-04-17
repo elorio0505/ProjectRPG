@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Further compartmentalized code, started working on event implementation">
+      <change afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/EnemyTypes/EnemySpider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/EventReward.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Enemy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +27,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectId" id="2etSFQwZAuPvQwS2pm2jPlvavrd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -40,13 +38,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="RPGGame.Entity.Abstracts" />
@@ -68,9 +75,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Ant Target.Unnamed" />
       <item itemvalue="Application.From the Top" />
     </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -80,6 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712722277145</updated>
+      <workItem from="1713363839715" duration="7377000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1712722660594</created>
@@ -111,6 +125,9 @@
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
