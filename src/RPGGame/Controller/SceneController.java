@@ -11,6 +11,7 @@ import java.io.InputStream;
 //TODO Customize the GUI for this project, instead of just retrofitting an already-made one from a previous project - Add Stats window, make functional
 public final class SceneController {
     static Player player;
+    public static Boolean gameRunning = false;
     public static String lastInput = "";
     private static boolean isStarted;
     private static JFrame frame;
@@ -23,6 +24,7 @@ public final class SceneController {
     private static JScrollPane gameTextAreaScrollbar;
 
     public static void start(Player sPlayer) {
+        gameRunning = true;
         if (!isStarted) {
             isStarted = true;
             player = sPlayer;

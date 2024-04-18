@@ -4,6 +4,8 @@ import RPGGame.Entity.Abstracts.Player;
 import RPGGame.Event.Abstracts.StoryEvent;
 import RPGGame.Event.Concrete.StoryEvents.TestEvent;
 
+import static java.lang.System.exit;
+
 // TODO build a basic loop that allows for testing
 public class GameController {
     Player player;
@@ -15,7 +17,11 @@ public class GameController {
         eventControl = new EventController();
 
         // TEST --------------------------------------------------------------------------------------------------------
-        StoryEvent testEvent = new TestEvent();
-        testEvent.run(player);
+        while (SceneController.gameRunning) {
+            StoryEvent testEvent = new TestEvent();
+            testEvent.run(player);
+        }
+        SceneController.gameTextAreaNewLine("Game over...");
+        exit(0);
     }
 }

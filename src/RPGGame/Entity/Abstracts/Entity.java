@@ -1,12 +1,14 @@
 package RPGGame.Entity.Abstracts;
 
+import RPGGame.Controller.SceneController;
 import RPGGame.Helper.DamageType;
 
 // TODO complete implementation
 public abstract class Entity {
     // statistics
     public int maxLife, currentLife, physAttack, specAttack, physDefense, specDefense, speed, luck;
-    public int maxLifeMod, physAttackMod, specAttackMod, physDefenseMod, specDefenseMod, speedMod, luckMod = 0;
+    protected Player player;
+
 
     public Entity() {
         maxLife = maxLifeValue();
@@ -21,9 +23,9 @@ public abstract class Entity {
 
     public void takeDamage(DamageType dmgType, Entity dmgOwner, int dmg) {
         if (dmgType == DamageType.PHYS) {
-            currentLife -= (dmg - (physDefense + physDefenseMod));
+            currentLife -= (dmg - (physDefense));
         } else if (dmgType == DamageType.SPEC) {
-            currentLife -= (dmg - (specDefense + specDefenseMod));
+            currentLife -= (dmg - (specDefense));
         } else if (dmgType == DamageType.LOSS) {
             currentLife -= (dmg);
         } else if (dmgType == DamageType.HEAL) {
@@ -31,14 +33,15 @@ public abstract class Entity {
         }
         if (currentLife <= 0) {
             currentLife = 0;
-            die();
+            die(player);
         }
-        if (currentLife > maxLife + maxLifeMod) {
-            currentLife = maxLife + maxLifeMod;
+        if (currentLife > maxLife) {
+            currentLife = maxLife;
         }
     }
 
-    public void die() {
+    public void die(Player player) { // TODO: I would prefer to be able to reset the game to it's initial state if you were to die, rather than force-closing the program. Sentinel?
+
     }
 
     // It's not super elegant, but this will force all children of this class to set the stat values.

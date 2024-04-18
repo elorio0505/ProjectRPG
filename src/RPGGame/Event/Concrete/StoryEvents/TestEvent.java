@@ -20,7 +20,7 @@ public class TestEvent extends StoryEvent {
             @Override
             public void execute(Player player) {
                 SceneController.gameTextAreaNewLine("You fucking imbecile, you chose POORLY. now DIE.");
-                player.die();
+                player.die(player);
             }
         });
     }

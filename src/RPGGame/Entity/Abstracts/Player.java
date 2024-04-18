@@ -1,11 +1,15 @@
 package RPGGame.Entity.Abstracts;
 
 import RPGGame.Controller.InventoryController;
+import RPGGame.Controller.SceneController;
 import RPGGame.Helper.DamageType;
+
+import static java.lang.System.exit;
 
 // TODO complete implementation
 public class Player extends Entity {
     final int DEFAULT_INVENTORY_SIZE = 8;
+    public int maxLifeMod, physAttackMod, specAttackMod, physDefenseMod, specDefenseMod, speedMod, luckMod, gold = 0;
 
     InventoryController inv;
     public String name;
@@ -31,7 +35,7 @@ public class Player extends Entity {
         }
         if (currentLife <= 0) {
             currentLife = 0;
-            die();
+            die(this);
         }
         if (currentLife > maxLife + maxLifeMod) {
             currentLife = maxLife + maxLifeMod;
@@ -43,6 +47,14 @@ public class Player extends Entity {
         inv.chestwear.onAttacked(dmgType, dmgOwner, dmg);
         inv.legwear.onAttacked(dmgType, dmgOwner, dmg);
         inv.ring.onAttacked(dmgType, dmgOwner, dmg);
+    }
+
+    @Override
+    public void die(Player player) {
+        super.die(player);
+        SceneController.gameTextAreaClear();
+        SceneController.gameTextAreaNewLine("YOU DIED!");
+        SceneController.gameRunning = false;
     }
 
     // Stat Definitions
