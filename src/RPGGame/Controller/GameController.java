@@ -13,15 +13,10 @@ public class GameController {
 
     public void start(String name) {
         player = new Player(name);
-        SceneController.start(player);
+        SceneController scController = new SceneController();
+        scController.start();
         eventControl = new EventController();
 
         // TEST --------------------------------------------------------------------------------------------------------
-        while (SceneController.gameRunning) {
-            StoryEvent testEvent = new TestEvent();
-            testEvent.run(player);
-        }
-        SceneController.gameTextAreaNewLine("Game over...");
-        exit(0);
     }
 }

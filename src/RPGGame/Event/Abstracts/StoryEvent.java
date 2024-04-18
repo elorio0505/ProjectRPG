@@ -1,5 +1,6 @@
 package RPGGame.Event.Abstracts;
 
+import RPGGame.Controller.OldSceneController;
 import RPGGame.Controller.SceneController;
 import RPGGame.Entity.Abstracts.Player;
 
@@ -19,13 +20,13 @@ public abstract class StoryEvent extends Event {
         SceneController.gameTextAreaNewLine(eventText);
         int i = 0;
         for (Choice c : choices) {
-            SceneController.gameTextAreaNewLine("[" + ++i + "]  " + c.text);
+            OldSceneController.gameTextAreaNewLine("[" + ++i + "]  " + c.text);
         }
-        String stale = SceneController.lastInput;
-        String nextInput = SceneController.lastInput;
+        String stale = OldSceneController.lastInput;
+        String nextInput = OldSceneController.lastInput;
         int input = -1;
         while (stale.equals(nextInput)) {
-            nextInput = SceneController.lastInput;
+            nextInput = OldSceneController.lastInput;
             input = -1;
             try {
                 input = Integer.parseInt(nextInput);

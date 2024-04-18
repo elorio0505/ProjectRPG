@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Further compartmentalized code, started working on event implementation">
+    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Small changes based on other contributor's changes">
+      <change afterPath="$PROJECT_DIR$/src/RPGGame/Controller/OldSceneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/EnemyTypes/EnemySpider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Concrete/EnemySpider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/ChestItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/ChestItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/InvItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/InvItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712759114642</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Small changes based on other contributor's changes">
+      <created>1713420605342</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713420605342</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +146,8 @@
     <MESSAGE value="Added a bunch of classes and established relationships between them" />
     <MESSAGE value="Added basic structural abstract classes" />
     <MESSAGE value="Further compartmentalized code, started working on event implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Further compartmentalized code, started working on event implementation" />
+    <MESSAGE value="Small changes based on other contributor's changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small changes based on other contributor's changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
