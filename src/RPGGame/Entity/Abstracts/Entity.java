@@ -1,6 +1,5 @@
 package RPGGame.Entity.Abstracts;
 
-import RPGGame.Controller.SceneController;
 import RPGGame.Helper.DamageType;
 
 // TODO complete implementation
@@ -21,15 +20,14 @@ public abstract class Entity {
         luck = luckValue();
     }
 
-    public void takeDamage(DamageType dmgType, Entity dmgOwner, int dmg) {
-        if (dmgType == DamageType.PHYS) {
-            currentLife -= (dmg - (physDefense));
-        } else if (dmgType == DamageType.SPEC) {
-            currentLife -= (dmg - (specDefense));
-        } else if (dmgType == DamageType.LOSS) {
-            currentLife -= (dmg);
-        } else if (dmgType == DamageType.HEAL) {
-            currentLife += dmg;
+    public void DamageEvent(DamageType dmgType, Entity dmgOwner, int dmg) {
+        switch (dmgType) {
+            case PHYS, LOSS, SPEC:
+                currentLife -= dmg;
+                break;
+            case HEAL:
+                currentLife += dmg;
+                break;
         }
         if (currentLife <= 0) {
             currentLife = 0;

@@ -1,9 +1,9 @@
 package RPGGame.Item.Concrete;
 
-import RPGGame.Item.Abstracts.EquippableItem;
+import RPGGame.Item.Abstracts.ChestItem;
 
 //Example Equipment
-public class IronChestplate extends EquippableItem {
+public class IronChestplate extends ChestItem {
     //Create equippable item with no stats
     @Override
     public int value() { return 20; }
@@ -17,4 +17,8 @@ public class IronChestplate extends EquippableItem {
     public int physAttack() { return 0; }
     @Override
     public int specAttack() { return 0; }
+    @Override
+    public int speed() { return 0; }
+    @Override
+    public int luck() {return 0; }
 }

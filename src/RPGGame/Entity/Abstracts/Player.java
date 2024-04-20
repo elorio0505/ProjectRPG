@@ -20,18 +20,23 @@ public class Player extends Entity {
     }
 
     @Override
-    public void takeDamage(DamageType dmgType, Entity dmgOwner, int dmg) {
-        if (dmgType == DamageType.PHYS) {
-            currentLife -= (dmg - (physDefense + physDefenseMod));
-            triggerArmorEffects(dmgType, dmgOwner, dmg);
-        } else if (dmgType == DamageType.SPEC) {
-            currentLife -= (dmg - (specDefense + specDefenseMod));
-            triggerArmorEffects(dmgType, dmgOwner, dmg);
-        } else if (dmgType == DamageType.LOSS) {
-            currentLife -= (dmg);
-            triggerArmorEffects(dmgType, dmgOwner, dmg);
-        } else if (dmgType == DamageType.HEAL) {
-            currentLife += dmg;
+    public void DamageEvent(DamageType dmgType, Entity player, int dmg) {
+        switch (dmgType) {
+            case PHYS:
+                currentLife -= (dmg - (physDefense + physDefenseMod));
+                triggerArmorEffects(dmgType, player, dmg);
+                break;
+            case SPEC:
+                currentLife -= (dmg - (specDefense + specDefenseMod));
+                triggerArmorEffects(dmgType, player, dmg);
+                break;
+            case LOSS:
+                currentLife -= (dmg);
+                triggerArmorEffects(dmgType, player, dmg);
+                break;
+            case HEAL:
+                currentLife += dmg;
+                break;
         }
         if (currentLife <= 0) {
             currentLife = 0;

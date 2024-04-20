@@ -15,7 +15,7 @@ public class EnemySpider extends Enemy {
     public void onTurn( Player player, int turnNumber ) {
         //Looping cycle of moves for the enemy
         switch (turnNumber % 2) {
-            case 0 : player.takeDamage(PHYS, player,1);
+            case 0 : player.DamageEvent(PHYS, player,1);
                 break;
             case 1 : //skip turn
                 break;

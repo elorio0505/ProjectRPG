@@ -17,4 +17,8 @@ public class EmptyEquipment extends EquippableItem {
     public int physAttack() { return 0; }
     @Override
     public int specAttack() { return 0; }
+    @Override
+    public int speed() { return 0; }
+    @Override
+    public int luck() {return 0; }
 }
