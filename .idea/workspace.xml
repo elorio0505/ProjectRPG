@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Restructured Equippable Items and Equipment Inventory Handling.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" afterDir="false" />
+    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Refactored Damage Handler">
+      <change afterPath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquipmentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Concrete/EnemySpider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Concrete/EnemySpider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquippableItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquippableItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/IronChestplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/IronChestplate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -122,7 +123,7 @@
       <updated>1712722277145</updated>
       <workItem from="1713363839715" duration="7377000" />
       <workItem from="1713517854035" duration="2953000" />
-      <workItem from="1713532419019" duration="8803000" />
+      <workItem from="1713532419019" duration="11624000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1712722660594</created>
@@ -168,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713625513067</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactored Damage Handler">
+      <option name="closed" value="true" />
+      <created>1713629023468</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713629023468</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +200,8 @@
     <MESSAGE value="Added basic structural abstract classes" />
     <MESSAGE value="Further compartmentalized code, started working on event implementation" />
     <MESSAGE value="Restructured Equippable Items and Equipment Inventory Handling." />
-    <option name="LAST_COMMIT_MESSAGE" value="Restructured Equippable Items and Equipment Inventory Handling." />
+    <MESSAGE value="Refactored Damage Handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored Damage Handler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

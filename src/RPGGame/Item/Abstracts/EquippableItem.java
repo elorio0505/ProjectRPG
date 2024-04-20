@@ -19,6 +19,8 @@ public abstract class EquippableItem extends InvItem {
         this.luck = luck();
     }
 
+    public abstract EquipmentType GetType();
+
     //Required to override these to set equipment stats
     public abstract int physDefense();
     public abstract int specDefense();
@@ -27,9 +29,7 @@ public abstract class EquippableItem extends InvItem {
     public abstract int speed();
     public abstract int luck();
 
-    public int getPhysDefense() {
-        return physDefense;
-    }
+    public int getPhysDefense() { return physDefense; }
     public int getSpecDefense() {
         return specDefense;
     }

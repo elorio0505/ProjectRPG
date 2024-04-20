@@ -47,8 +47,25 @@ public class Player extends Entity {
         }
     }
 
-    public void triggerArmorEffects(DamageType dmgType, Entity dmgOwner, int dmg) {
+    public void triggerArmorEffects(DamageType dmgType, Entity player, int dmg) {
         //TODO Equipment Damage Mitigation
+        //Total (aka Effective) stats calculated every time, Maybe it could be calculated and saved from equip/unequip
+        switch (dmgType) {
+            case PHYS:
+                int EPhysDefense = player.physDefense;
+                break;
+            case SPEC:
+                currentLife -= (dmg - (specDefense + specDefenseMod));
+                triggerArmorEffects(dmgType, player, dmg);
+                break;
+            case LOSS:
+                currentLife -= (dmg);
+                triggerArmorEffects(dmgType, player, dmg);
+                break;
+            case HEAL:
+                currentLife += dmg;
+                break;
+        }
     }
 
     @Override
