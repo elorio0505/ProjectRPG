@@ -1,10 +1,13 @@
 package RPGGame.Item.Concrete;
 
 import RPGGame.Item.Abstracts.EquippableItem;
+import RPGGame.Item.Abstracts.Helper.EquipmentType;
 
 //"Empty" with 0 stats replaces equipment when gear is unequipped
 public class EmptyEquipment extends EquippableItem {
     //Create equippable item with no stats
+    @Override
+    public EquipmentType type() { return null; }
     @Override
     public int value() { return 0; }
     @Override

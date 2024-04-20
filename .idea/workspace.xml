@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Changed Equippable Items Types into an enum, since the classes did not have inherent functionality">
+    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Removed Redundant Code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquippableItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquippableItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/IronChestplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/IronChestplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquipmentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/Helper/EquipmentType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +77,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nolan\Documents\IDEA\ProjectRPG\src\RPGGame\Item\Abstracts\Helper" />
       <recent name="C:\Users\nolan\Documents\IDEA\ProjectRPG\src\RPGGame\Item\Abstracts" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -121,7 +122,7 @@
       <updated>1712722277145</updated>
       <workItem from="1713363839715" duration="7377000" />
       <workItem from="1713517854035" duration="2953000" />
-      <workItem from="1713532419019" duration="12071000" />
+      <workItem from="1713532419019" duration="12362000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1712722660594</created>
@@ -183,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713631140551</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Removed Redundant Code">
+      <option name="closed" value="true" />
+      <created>1713631382142</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713631382142</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +217,8 @@
     <MESSAGE value="Restructured Equippable Items and Equipment Inventory Handling." />
     <MESSAGE value="Refactored Damage Handler" />
     <MESSAGE value="Changed Equippable Items Types into an enum, since the classes did not have inherent functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Equippable Items Types into an enum, since the classes did not have inherent functionality" />
+    <MESSAGE value="Removed Redundant Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Redundant Code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
