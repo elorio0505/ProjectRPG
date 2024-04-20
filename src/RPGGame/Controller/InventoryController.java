@@ -3,7 +3,6 @@ package RPGGame.Controller;
 import RPGGame.Item.Abstracts.*;
 import RPGGame.Item.Concrete.EmptyEquipment;
 import java.util.ArrayList;
-import static RPGGame.Item.Abstracts.EquipmentType.*;
 
 // TODO complete implementation
 public class InventoryController {

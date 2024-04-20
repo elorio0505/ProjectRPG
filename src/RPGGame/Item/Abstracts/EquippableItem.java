@@ -1,8 +1,5 @@
 package RPGGame.Item.Abstracts;
 
-import RPGGame.Entity.Abstracts.Entity;
-import RPGGame.Helper.DamageType;
-
 public abstract class EquippableItem extends InvItem {
     int physDefense;
     int specDefense;
@@ -18,8 +15,6 @@ public abstract class EquippableItem extends InvItem {
         this.speed = speed();
         this.luck = luck();
     }
-
-    public abstract EquipmentType GetType();
 
     //Required to override these to set equipment stats
     public abstract int physDefense();

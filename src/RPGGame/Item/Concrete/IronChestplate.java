@@ -1,6 +1,5 @@
 package RPGGame.Item.Concrete;
 
-import RPGGame.Item.Abstracts.ChestItem;
 import RPGGame.Item.Abstracts.EquipmentType;
 import RPGGame.Item.Abstracts.EquippableItem;
 
