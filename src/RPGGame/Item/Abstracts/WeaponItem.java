@@ -1,4 +1,4 @@
 package RPGGame.Item.Abstracts;
 
-public abstract class WeaponItem extends EquipabbleItem{
+public abstract class WeaponItem extends EquippableItem {
 }

@@ -1,4 +1,4 @@
 package RPGGame.Item.Abstracts;
 
-public abstract class RingItem extends EquipabbleItem {
+public abstract class RingItem extends EquippableItem {
 }

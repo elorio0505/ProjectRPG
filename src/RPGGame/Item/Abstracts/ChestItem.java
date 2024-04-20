@@ -1,6 +1,6 @@
 package RPGGame.Item.Abstracts;
 
-public abstract class ChestItem extends EquipabbleItem {
+public abstract class ChestItem extends EquippableItem {
   private int defenseRate;
 
   public ChestItem(String itemName, int defenseRate) {

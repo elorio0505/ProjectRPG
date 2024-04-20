@@ -43,10 +43,7 @@ public class Player extends Entity {
     }
 
     public void triggerArmorEffects(DamageType dmgType, Entity dmgOwner, int dmg) {
-        inv.headwear.onAttacked(dmgType, dmgOwner, dmg);
-        inv.chestwear.onAttacked(dmgType, dmgOwner, dmg);
-        inv.legwear.onAttacked(dmgType, dmgOwner, dmg);
-        inv.ring.onAttacked(dmgType, dmgOwner, dmg);
+        //TODO Equipment Damage Mitigation
     }
 
     @Override
