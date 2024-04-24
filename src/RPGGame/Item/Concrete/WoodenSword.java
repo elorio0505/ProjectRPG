@@ -5,7 +5,7 @@ import RPGGame.Item.Abstracts.EquippableItem;
 import RPGGame.Item.Abstracts.Helper.EquipmentType;
 
 //Example Equipment
-public class IronChestplate extends EquippableItem {
+public class WoodenSword extends EquippableItem {
     @Override
     public EquipmentType type() { return WEAPON; }
 
