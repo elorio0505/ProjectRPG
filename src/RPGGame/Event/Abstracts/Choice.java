@@ -2,14 +2,21 @@ package RPGGame.Event.Abstracts;
 
 import RPGGame.Entity.Abstracts.Player;
 
-import java.util.ArrayList;
-
 public abstract class Choice {
     String text;
-    ArrayList<Choice> choices;
+    private boolean choosable;
 
     public Choice(String text) {
         this.text = text;
+        choosable = true;
+    }
+
+    public void makeUnchoosable(){
+        choosable = false;
+    }
+
+    public boolean isChoosable(){
+        return choosable;
     }
 
     public abstract void execute(Player player);

@@ -39,7 +39,12 @@ public abstract class Entity {
             currentLife = maxLife;
         }
     }
-
+    public boolean isAlive(){
+        if (currentLife > 0){
+            return true;
+        }
+        return false;
+    }
     public void die(Player player) { // TODO: I would prefer to be able to reset the game to it's initial state if you were to die, rather than force-closing the program. Sentinel?
 
     }

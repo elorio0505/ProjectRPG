@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Small changes based on other contributor's changes">
-      <change afterPath="$PROJECT_DIR$/src/RPGGame/Controller/OldSceneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/GeneratedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartTransitionEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/EventController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Encounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Encounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/WeaponItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/WeaponItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +35,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -41,22 +56,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.From the Top.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "225",
+    "git-widget-placeholder": "general-Updates",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="RPGGame.Entity" />
@@ -79,14 +96,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Ant Target.Unnamed" />
       <item itemvalue="Application.From the Top" />
     </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
+        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>
   </component>
@@ -99,6 +115,9 @@
       <option name="presentableId" value="Default" />
       <updated>1712722277145</updated>
       <workItem from="1713363839715" duration="7377000" />
+      <workItem from="1713512377543" duration="8552000" />
+      <workItem from="1713632453676" duration="17941000" />
+      <workItem from="1713976606978" duration="7934000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1712722660594</created>
@@ -140,6 +159,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />

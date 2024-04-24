@@ -1,16 +1,34 @@
 package RPGGame.Controller;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class SceneController extends JFrame {
+public final class SceneController extends JFrame {
     public static Boolean gameRunning = false;
     private JPanel mainPanel;
     private JTextField userInput;
     private JButton sendButton;
-    private JTextArea gameTextArea;
+    private static JTextArea gameTextArea;
     private JPanel textAreaPanel;
     private JPanel statsPanel;
     private JTextArea statsTextArea;
+
+    private static String lastInput;
+    public SceneController() {
+        lastInput = "";
+        sendButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                lastInput = userInput.getText();
+                userInput.setText("");
+                gameTextArea.append("\n" + lastInput);
+            }
+        });
+    }
+
+
+
 
     public void start() {
         JFrame frame = new JFrame("SceneController");
@@ -22,9 +40,17 @@ public class SceneController extends JFrame {
         frame.setVisible(true);
     }
 
+    public static String getLastInput(){
+        String temp = lastInput;
+        lastInput = "";
+        return temp;
+    }
+
     public static void gameTextAreaClear() {
+        gameTextArea.setText("");
     }
 
     public static void gameTextAreaNewLine(String text) {
+        gameTextArea.append("\n" + text);
     }
 }

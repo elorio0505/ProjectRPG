@@ -44,6 +44,14 @@ public class InventoryController {
         newItem.onEquip();
     }
 
+    public void addItem(InvItem item){
+        if (inventory.size() < size) {
+            inventory.add(item);
+        } else {
+            SceneController.gameTextAreaNewLine("Inventory Full");
+        }
+    }
+
     //TODO: Implement
     public void unequip() {
 

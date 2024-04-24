@@ -3,6 +3,7 @@ package RPGGame.Entity.Abstracts;
 import RPGGame.Controller.InventoryController;
 import RPGGame.Controller.SceneController;
 import RPGGame.Helper.DamageType;
+import RPGGame.Item.Abstracts.InvItem;
 
 import static java.lang.System.exit;
 
@@ -57,9 +58,13 @@ public class Player extends Entity {
         SceneController.gameRunning = false;
     }
 
+    public void addItem(InvItem item){
+        inv.addItem(item);
+    }
+
     // Stat Definitions
     @Override
-    public int maxLifeValue() {return 10;}
+    public int maxLifeValue() {return 1;}
 
     @Override
     public int physAttackValue() {return 1;}
