@@ -1,7 +1,7 @@
 package RPGGame.Item.Concrete;
 
 import static RPGGame.Item.Abstracts.Helper.EquipmentType.*;
-import RPGGame.Item.Abstracts.EquippableItem;
+import RPGGame.Item.Abstracts.EquippableItem; 
 import RPGGame.Item.Abstracts.Helper.EquipmentType;
 
 //Example Equipment
