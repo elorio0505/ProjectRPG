@@ -7,7 +7,7 @@ import RPGGame.Item.Abstracts.Helper.EquipmentType;
 //Example Equipment
 public class RunningShoes extends EquippableItem {
     @Override
-    public EquipmentType type() { return BODY; }
+    public EquipmentType type() { return LEGS; }
 
     //Create equippable item with no stats
     @Override
