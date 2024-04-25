@@ -5,21 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Small changes based on other contributor's changes">
-      <change afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/GeneratedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartTransitionEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/EventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Encounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Encounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartTransitionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartTransitionEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquippableItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquippableItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/WeaponItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/WeaponItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "225",
-    "git-widget-placeholder": "general-Updates",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",

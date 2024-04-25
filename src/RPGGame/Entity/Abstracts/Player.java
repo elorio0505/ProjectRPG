@@ -1,5 +1,6 @@
 package RPGGame.Entity.Abstracts;
 
+import RPGGame.Controller.GameController;
 import RPGGame.Controller.InventoryController;
 import RPGGame.Controller.SceneController;
 import RPGGame.Helper.DamageType;
@@ -17,7 +18,7 @@ public class Player extends Entity {
 
     public Player(String name) {
         this.name = name;
-        inv = new InventoryController(DEFAULT_INVENTORY_SIZE);
+        inv = new InventoryController(this, DEFAULT_INVENTORY_SIZE);
     }
 
     @Override
@@ -72,8 +73,8 @@ public class Player extends Entity {
     @Override
     public void die(Player player) {
         super.die(player);
-        SceneController.gameTextAreaClear();
-        SceneController.gameTextAreaNewLine("YOU DIED!");
+        GameController.sc.gameTextAreaClear();
+        GameController.sc.gameTextAreaNewLine("YOU DIED!");
         SceneController.gameRunning = false;
     }
 

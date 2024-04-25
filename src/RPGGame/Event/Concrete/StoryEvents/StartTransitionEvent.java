@@ -1,12 +1,14 @@
 package RPGGame.Event.Concrete.StoryEvents;
 
 import RPGGame.Controller.EventController;
+import RPGGame.Controller.GameController;
 import RPGGame.Controller.SceneController;
 import RPGGame.Entity.Abstracts.Entity;
 import RPGGame.Entity.Abstracts.Player;
 import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
 import RPGGame.Helper.DamageType;
+import RPGGame.Item.Abstracts.Helper.EquipmentType;
 import RPGGame.Item.Abstracts.WeaponItem;
 
 public class StartTransitionEvent extends StoryEvent {
@@ -17,17 +19,42 @@ public class StartTransitionEvent extends StoryEvent {
         choices.add(new Choice("Grab the knife") {
             @Override
             public void execute(Player player) {
-                SceneController.gameTextAreaNewLine("You walk over to the spruce. You manage to shimmy the knife out.");
+                GameController.sc.gameTextAreaNewLine("You walk over to the spruce. You manage to shimmy the knife out.");
                 this.makeUnchoosable();
-                player.addItem(new WeaponItem() {
+                player.addItem(new WeaponItem(1) {
                     @Override
-                    public void onAttacked(DamageType dmgType, Entity dmgOwner, int dmg) {
-
+                    public EquipmentType type() {
+                        return null;
                     }
 
                     @Override
-                    public void onAttacked() {
+                    public int physDefense() {
+                        return 0;
+                    }
 
+                    @Override
+                    public int specDefense() {
+                        return 0;
+                    }
+
+                    @Override
+                    public int physAttack() {
+                        return 0;
+                    }
+
+                    @Override
+                    public int specAttack() {
+                        return 0;
+                    }
+
+                    @Override
+                    public int speed() {
+                        return 0;
+                    }
+
+                    @Override
+                    public int luck() {
+                        return 0;
                     }
 
                     @Override

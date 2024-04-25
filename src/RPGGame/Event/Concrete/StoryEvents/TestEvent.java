@@ -1,5 +1,6 @@
 package RPGGame.Event.Concrete.StoryEvents;
 
+import RPGGame.Controller.GameController;
 import RPGGame.Controller.SceneController;
 import RPGGame.Entity.Abstracts.Player;
 import RPGGame.Event.Abstracts.Choice;
@@ -13,13 +14,13 @@ public class TestEvent extends StoryEvent {
         choices.add(new Choice("This is a good choice :)") {
             @Override
             public void execute(Player player) {
-                SceneController.gameTextAreaNewLine("You made the right choice, gaining 1 Luck in the process!!! yippee!!");
+                GameController.sc.gameTextAreaNewLine("You made the right choice, gaining 1 Luck in the process!!! yippee!!");
             }
         });
         choices.add(new Choice("This is a bad choice :(") {
             @Override
             public void execute(Player player) {
-                SceneController.gameTextAreaNewLine("You fucking imbecile, you chose POORLY. now DIE.");
+                GameController.sc.gameTextAreaNewLine("You fucking imbecile, you chose POORLY. now DIE.");
                 player.die(player);
             }
         });

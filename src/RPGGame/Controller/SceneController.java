@@ -9,7 +9,7 @@ public final class SceneController extends JFrame {
     private JPanel mainPanel;
     private JTextField userInput;
     private JButton sendButton;
-    private static JTextArea gameTextArea;
+    private JTextArea gameTextArea;
     private JPanel textAreaPanel;
     private JPanel statsPanel;
     private JTextArea statsTextArea;
@@ -21,14 +21,11 @@ public final class SceneController extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 lastInput = userInput.getText();
+                gameTextAreaNewLine(userInput.getText());
                 userInput.setText("");
-                gameTextArea.append("\n" + lastInput);
             }
         });
     }
-
-
-
 
     public void start() {
         JFrame frame = new JFrame("SceneController");
@@ -46,11 +43,12 @@ public final class SceneController extends JFrame {
         return temp;
     }
 
-    public static void gameTextAreaClear() {
+    public void gameTextAreaClear() {
         gameTextArea.setText("");
     }
 
-    public static void gameTextAreaNewLine(String text) {
-        gameTextArea.append("\n" + text);
+    public void gameTextAreaNewLine(String text) {
+        System.out.println("it's called..." + text);
+        gameTextArea.append(">> " + text + "\n");
     }
 }

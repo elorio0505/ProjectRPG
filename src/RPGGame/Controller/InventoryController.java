@@ -1,54 +1,58 @@
 package RPGGame.Controller;
 
+import RPGGame.Entity.Abstracts.Player;
 import RPGGame.Item.Abstracts.*;
+import RPGGame.Item.Abstracts.Helper.EquipmentType;
 
 import java.util.ArrayList;
 
 // TODO complete implementation
 public class InventoryController {
     ArrayList<InvItem> inventory;
+    Player owner;
     public WeaponItem weapon;
-    public HeadItem headwear;
-    public ChestItem chestwear;
-    public LegItem legwear;
-    public RingItem ring;
+    public EquippableItem headwear;
+    public EquippableItem chestwear;
+    public EquippableItem legwear;
+    public EquippableItem ring;
     int size;
 
-    public InventoryController(int size) {
+    public InventoryController(Player owner, int size) {
         inventory = new ArrayList<InvItem>();
+        this.owner = owner;
         this.size = size;
     }
 
     //TODO: Please make this better, I hate this
-    public void equip(EquipabbleItem newItem) {
-        EquipabbleItem oldItem = null;
+    public void equip(EquippableItem newItem) {
+        EquippableItem oldItem = null;
         if (newItem instanceof WeaponItem) {
             oldItem = weapon;
             weapon = (WeaponItem)newItem;
-        } else if (newItem instanceof HeadItem) {
+        } else if (newItem.GetType() == EquipmentType.HEAD) {
             oldItem = headwear;
-            headwear = (HeadItem)newItem;
-        } else if (newItem instanceof ChestItem) {
+            headwear = newItem;
+        } else if (newItem.GetType() == EquipmentType.BODY) {
             oldItem = chestwear;
-            chestwear = (ChestItem) newItem;
-        } else if (newItem instanceof LegItem) {
+            chestwear = newItem;
+        } else if (newItem.GetType() == EquipmentType.LEGS) {
             oldItem = legwear;
-            legwear = (LegItem) newItem;
-        } else if (newItem instanceof RingItem) {
+            legwear = newItem;
+        } else if (newItem.GetType() == EquipmentType.RING) {
             oldItem = ring;
-            ring = (RingItem) newItem;
+            ring = newItem;
         }
         if (oldItem != null) {
-            oldItem.onUnequip();
+            oldItem.onUneuip(owner);
         }
-        newItem.onEquip();
+        newItem.onEquip(owner);
     }
 
     public void addItem(InvItem item){
         if (inventory.size() < size) {
             inventory.add(item);
         } else {
-            SceneController.gameTextAreaNewLine("Inventory Full");
+            GameController.sc.gameTextAreaNewLine("Inventory Full");
         }
     }
 

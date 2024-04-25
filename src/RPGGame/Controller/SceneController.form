@@ -53,7 +53,8 @@
               <background color="-13487566"/>
               <editable value="false"/>
               <foreground color="-1"/>
-              <text value="TEST TEST TEST!!"/>
+              <lineWrap value="true"/>
+              <text value=""/>
               <wrapStyleWord value="true"/>
             </properties>
           </component>

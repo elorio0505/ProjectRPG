@@ -11,19 +11,20 @@ import static java.lang.System.exit;
 
 // TODO build a basic loop that allows for testing
 public class GameController {
-    private SceneController sceneController;
     private EventController eventController;
+    public static SceneController sc = new SceneController();
     private Player player;
 
     private Event currentEvent;
     public GameController() {
-        this.sceneController = new SceneController();
-        this.eventController = new EventController(sceneController);
+        //sc = new SceneController();
+        this.eventController = new EventController(sc);
         this.player = new Player("PlayerName");
     }
 
     public void startGame() {
-        sceneController.start();
+        sc.start();
+        sc.gameTextAreaNewLine("Seriously...");
         currentEvent = new StartEvent();
         runGameLoop();
     }

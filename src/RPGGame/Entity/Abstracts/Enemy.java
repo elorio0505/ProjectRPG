@@ -1,5 +1,6 @@
 package RPGGame.Entity.Abstracts;
 
+import RPGGame.Controller.GameController;
 import RPGGame.Controller.SceneController;
 
 public abstract class Enemy extends Entity {
@@ -14,7 +15,7 @@ public abstract class Enemy extends Entity {
     public void die(Player player) {
         super.die(player);
         player.gold += lootMoney;
-        SceneController.gameTextAreaNewLine(name + " has perished, and dropped " + lootMoney + " gold!");
+        GameController.sc.gameTextAreaNewLine(name + " has perished, and dropped " + lootMoney + " gold!");
     }
 
     public abstract void onTurn(Player player, int turnNumber);

@@ -1,5 +1,6 @@
 package RPGGame.Item.Abstracts;
 
+import RPGGame.Entity.Abstracts.Player;
 import RPGGame.Item.Abstracts.Helper.EquipmentType;
 
 public abstract class EquippableItem extends InvItem {
@@ -21,6 +22,22 @@ public abstract class EquippableItem extends InvItem {
 
     //Create equippable item with no stats
     public abstract EquipmentType type();
+    public void onUneuip(Player player) {
+        player.physAttack -= this.physAttack;
+        player.physDefense -= this.physDefense;
+        player.specAttack -= this.specAttack;
+        player.specDefense -= this.specDefense;
+        player.speed -= this.speed;
+        player.luck -= this.luck;
+    }
+    public void onEquip(Player player) {
+        player.physAttack += this.physAttack;
+        player.physDefense += this.physDefense;
+        player.specAttack += this.specAttack;
+        player.specDefense += this.specDefense;
+        player.speed += this.speed;
+        player.luck += this.luck;
+    }
 
     //Required to override these to set equipment stats
     public abstract int physDefense();
