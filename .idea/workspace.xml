@@ -4,22 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Small changes based on other contributor's changes">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Merging and fixing issues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/EventController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/OldSceneController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Enemy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Concrete/EnemySpider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Encounter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartTransitionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartTransitionEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquippableItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquippableItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/WeaponItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/WeaponItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Helper/DamageType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquippableItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/Helper/EquipmentType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/InvItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/WeaponItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/EmptyEquipment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/IronChestplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/RingofThorns.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/RunningShoes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/WitchHat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/WoodenSword.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +55,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "elorio0505"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/elorio0505/ProjectRPG.git",
+    "accountId": "3d8ba265-544b-4257-ac6f-e88ed878cae8"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -62,7 +88,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "225",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Small-Scope",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -75,6 +101,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="RPGGame" />
       <recent name="RPGGame.Entity" />
       <recent name="RPGGame.Entity.Abstracts" />
       <recent name="RPGGame.Event.Abstracts" />
@@ -153,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713420605342</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Merging and fixing issues">
+      <option name="closed" value="true" />
+      <created>1714023932517</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714023932517</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +211,8 @@
     <MESSAGE value="Added basic structural abstract classes" />
     <MESSAGE value="Further compartmentalized code, started working on event implementation" />
     <MESSAGE value="Small changes based on other contributor's changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small changes based on other contributor's changes" />
+    <MESSAGE value="Merging and fixing issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merging and fixing issues" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,9 +1,7 @@
 package RPGGame.Event.Concrete.StoryEvents;
 
-import RPGGame.Controller.EventController;
 import RPGGame.Controller.GameController;
-import RPGGame.Controller.SceneController;
-import RPGGame.Entity.Abstracts.Player;
+import RPGGame.Player;
 import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
 
@@ -16,15 +14,15 @@ public class StartEvent extends StoryEvent {
         choices.add(new Choice("Dig yourself out") {
             @Override
             public void execute(Player player) {
-                GameController.sc.gameTextAreaNewLine("Adrenaline takes over. You claw at the snow with aching numb hands. You are free.");
-                //
+                System.out.println("Adrenaline takes over. You claw at the snow with aching numb hands. You are free.");
+                new StartTransitionEvent().run(player);
             }
         });
         choices.add(new Choice("Close your eyes.") {
             @Override
             public void execute(Player player) {
-                GameController.sc.gameTextAreaNewLine("Just 5 more minutes...");
-                player.die(player);
+                System.out.println("Just 5 more minutes...");
+                player.die("At least you'll be well preserved.");
             }
         });
     }

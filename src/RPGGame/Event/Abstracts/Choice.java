@@ -1,6 +1,6 @@
 package RPGGame.Event.Abstracts;
 
-import RPGGame.Entity.Abstracts.Player;
+import RPGGame.Player;
 
 public abstract class Choice {
     String text;

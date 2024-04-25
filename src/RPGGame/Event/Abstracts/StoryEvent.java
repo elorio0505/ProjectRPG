@@ -1,8 +1,7 @@
 package RPGGame.Event.Abstracts;
 
 import RPGGame.Controller.GameController;
-import RPGGame.Controller.SceneController;
-import RPGGame.Entity.Abstracts.Player;
+import RPGGame.Player;
 
 import java.util.ArrayList;
 
@@ -17,26 +16,12 @@ public abstract class StoryEvent extends Event {
 
     @Override
     public boolean run(Player player) {
-        GameController.sc.gameTextAreaNewLine(eventText);
+        System.out.println(eventText);
         int i = 0;
         for (Choice c : choices) {
-            GameController.sc.gameTextAreaNewLine("[" + ++i + "]  " + c.text);
+            System.out.println("[" + ++i + "]  " + c.text);
         }
-        String stale = SceneController.getLastInput();
-        String nextInput = SceneController.getLastInput();
-        int input = -1;
-        while (stale.equals(nextInput)) {
-            nextInput = SceneController.getLastInput();
-            input = -1;
-            try {
-                input = Integer.parseInt(nextInput);
-            } catch (NumberFormatException e) {
-                // continue polling
-            }
-            if (input < 1 || input > i) {
-                stale = nextInput;
-            }
-        }
+        int input = Integer.parseInt(GameController.sc.nextLine());
         choices.get(input - 1).execute(player);
         return true;
     }

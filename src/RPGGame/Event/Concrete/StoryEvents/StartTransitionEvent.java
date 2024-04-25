@@ -1,15 +1,9 @@
 package RPGGame.Event.Concrete.StoryEvents;
 
 import RPGGame.Controller.EventController;
-import RPGGame.Controller.GameController;
-import RPGGame.Controller.SceneController;
-import RPGGame.Entity.Abstracts.Entity;
-import RPGGame.Entity.Abstracts.Player;
+import RPGGame.Player;
 import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
-import RPGGame.Helper.DamageType;
-import RPGGame.Item.Abstracts.Helper.EquipmentType;
-import RPGGame.Item.Abstracts.WeaponItem;
 
 public class StartTransitionEvent extends StoryEvent {
     //this event gives some backstory, then sets up the player for the events ahead
@@ -19,56 +13,11 @@ public class StartTransitionEvent extends StoryEvent {
         choices.add(new Choice("Grab the knife") {
             @Override
             public void execute(Player player) {
-                GameController.sc.gameTextAreaNewLine("You walk over to the spruce. You manage to shimmy the knife out.");
+                System.out.println("You walk over to the spruce. You manage to shimmy the knife out.");
                 this.makeUnchoosable();
-                player.addItem(new WeaponItem(1) {
-                    @Override
-                    public EquipmentType type() {
-                        return null;
-                    }
-
-                    @Override
-                    public int physDefense() {
-                        return 0;
-                    }
-
-                    @Override
-                    public int specDefense() {
-                        return 0;
-                    }
-
-                    @Override
-                    public int physAttack() {
-                        return 0;
-                    }
-
-                    @Override
-                    public int specAttack() {
-                        return 0;
-                    }
-
-                    @Override
-                    public int speed() {
-                        return 0;
-                    }
-
-                    @Override
-                    public int luck() {
-                        return 0;
-                    }
-
-                    @Override
-                    public int value() {
-                        return 0;
-                    }
-
-                    @Override
-                    public String itemName() {
-                        return "Basic Knife";
-                    }
-                });
+                };
             }
-        });
+        );
         choices.add(new Choice("Follow the tracks") {
             @Override
             public void execute(Player player) {
