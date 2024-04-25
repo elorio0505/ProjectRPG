@@ -1,51 +1,69 @@
 package RPGGame.Controller;
 
 import RPGGame.Item.Abstracts.*;
-
+import RPGGame.Item.Concrete.EmptyEquipment;
 import java.util.ArrayList;
 
 // TODO complete implementation
 public class InventoryController {
     ArrayList<InvItem> inventory;
-    public WeaponItem weapon;
-    public HeadItem headwear;
-    public ChestItem chestwear;
-    public LegItem legwear;
-    public RingItem ring;
+    public EquippableItem weapon;
+    public EquippableItem headwear;
+    public EquippableItem chestwear;
+    public EquippableItem legwear;
+    public EquippableItem ring;
     int size;
+    EmptyEquipment empty;
 
     public InventoryController(int size) {
         inventory = new ArrayList<InvItem>();
         this.size = size;
+        EmptyEquipment empty = new EmptyEquipment();
     }
 
-    //TODO: Please make this better, I hate this
-    public void equip(EquipabbleItem newItem) {
-        EquipabbleItem oldItem = null;
-        if (newItem instanceof WeaponItem) {
-            oldItem = weapon;
-            weapon = (WeaponItem)newItem;
-        } else if (newItem instanceof HeadItem) {
-            oldItem = headwear;
-            headwear = (HeadItem)newItem;
-        } else if (newItem instanceof ChestItem) {
-            oldItem = chestwear;
-            chestwear = (ChestItem) newItem;
-        } else if (newItem instanceof LegItem) {
-            oldItem = legwear;
-            legwear = (LegItem) newItem;
-        } else if (newItem instanceof RingItem) {
-            oldItem = ring;
-            ring = (RingItem) newItem;
+    //Note: Equipped items still use normal inventory space
+    public void equip(EquippableItem IncomingItem) {
+        switch (IncomingItem.GetType()) {
+            case WEAPON:
+                weapon = IncomingItem;
+                break;
+            case HEAD:
+                headwear = IncomingItem;
+                break;
+            case BODY:
+                chestwear = IncomingItem;
+                break;
+            case LEGS:
+                legwear = IncomingItem;
+                break;
+            case RING:
+                ring = IncomingItem;
+                break;
         }
-        if (oldItem != null) {
-            oldItem.onUnequip();
-        }
-        newItem.onEquip();
     }
 
-    //TODO: Implement
-    public void unequip() {
-
+    //unequip method //Fills equipment slot with empty
+    /*TODO: Current implementation performs unequip when any item of same type is passed,
+        Either use a generic object of same type as the parameter to make it a generic unequip function (preferred),
+        or needs to check if the item matches the equipped item
+    */
+    public void unequip(EquippableItem IncomingItem) {
+        switch (IncomingItem.GetType()) {
+            case WEAPON:
+                weapon = empty;
+                break;
+            case HEAD:
+                headwear = empty;
+                break;
+            case BODY:
+                chestwear = empty;
+                break;
+            case LEGS:
+                legwear = empty;
+                break;
+            case RING:
+                ring = empty;
+                break;
+        }
     }
 }
