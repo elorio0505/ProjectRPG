@@ -10,4 +10,8 @@ public abstract class InvItem {
 
     public abstract int value();
     public abstract String itemName();
+
+    public String getItemName() {
+        return itemName;
+    }
 }
