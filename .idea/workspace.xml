@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Added Scrollbar to GUI" />
+    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Slight change to death code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714154852516</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Slight change to death code">
+      <created>1714155333348</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714155333348</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +209,8 @@
     <MESSAGE value="Merging and fixing issues" />
     <MESSAGE value="added functionality to event system, slight modifications to the scene, and started writing the story." />
     <MESSAGE value="Added Scrollbar to GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Scrollbar to GUI" />
+    <MESSAGE value="Slight change to death code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slight change to death code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

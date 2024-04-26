@@ -24,8 +24,9 @@ public class Player {
                 if (input.equals("1")){
                     scene.gameOutputClear();
                     new StartEvent().run(new Player(this.name),scene, true);
+                } else {
+                    System.exit(1);
                 }
-                System.exit(1);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
