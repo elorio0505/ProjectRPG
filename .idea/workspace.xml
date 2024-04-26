@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Merging and fixing issues">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="added functionality to event system, slight modifications to the scene, and started writing the story.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/EventController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/PrimaryScene.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/PrimaryScene.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/PrimaryScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/PrimaryScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/GeneratedEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartTransitionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/EventTreeAndTracks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +43,9 @@
 }</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -172,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714023932517</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added functionality to event system, slight modifications to the scene, and started writing the story.">
+      <created>1714153983894</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714153983894</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +197,8 @@
     <MESSAGE value="Further compartmentalized code, started working on event implementation" />
     <MESSAGE value="Small changes based on other contributor's changes" />
     <MESSAGE value="Merging and fixing issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merging and fixing issues" />
+    <MESSAGE value="added functionality to event system, slight modifications to the scene, and started writing the story." />
+    <option name="LAST_COMMIT_MESSAGE" value="added functionality to event system, slight modifications to the scene, and started writing the story." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

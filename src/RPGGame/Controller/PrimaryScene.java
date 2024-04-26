@@ -1,31 +1,26 @@
 package RPGGame.Controller;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public final class PrimaryScene extends JFrame {
-    public static Boolean gameRunning = false;
     private JPanel mainPanel;
     private JTextField userInput;
     private JButton sendButton;
     private JTextArea gameTextArea;
-    private JPanel textAreaPanel;
+    @SuppressWarnings("unused") private JPanel textAreaPanel;
+    private JScrollPane scrollBar;
 
     private static String lastInput;
     private static final Object inputLock = new Object();
     public PrimaryScene() {
         System.out.println("PrimaryScene instance created: " + this.hashCode());
-        sendButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                synchronized (inputLock) { //synchronized to prevent simultaneous editing of text area --devin
-                    lastInput = userInput.getText();
-                    gameOutput(">>" + userInput.getText());
-                    gameOutput("");
-                    userInput.setText("");
-                    inputLock.notifyAll();
-                }
+        sendButton.addActionListener(e -> {
+            synchronized (inputLock) { //synchronized to prevent simultaneous editing of text area --devin
+                lastInput = userInput.getText();
+                gameOutput(">>" + userInput.getText());
+                gameOutput("");
+                userInput.setText("");
+                inputLock.notifyAll();
             }
         });
     }
@@ -35,21 +30,14 @@ public final class PrimaryScene extends JFrame {
         frame.setContentPane(this.mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("ProjectRPG");
+        scrollBar.setViewportView(gameTextArea);
         frame.setSize(1000, 500);
         frame.setResizable(false);
         frame.setVisible(true);
     }
 
-    public String getLastInput(){ //returns last input entered by user via the UI --devin
-        String temp = lastInput;
-        lastInput = "";
-        return temp;
-    }
-
     public void gameOutputClear() { //clears text area --devin
-        SwingUtilities.invokeLater(() -> {
-            gameTextArea.setText("");
-        });
+        SwingUtilities.invokeLater(() -> gameTextArea.setText(""));
     }
 
     public String waitForNewInput() throws InterruptedException { //waits for user to enter input into UI and returns it --devin
