@@ -13,7 +13,8 @@ public class EventRiverCrossing extends StoryEvent {
     this.addChoice(new Choice("Attempt to cross the log") {
       @Override 
       public void execute(Player player, PrimaryScene scene) {
-        scene.gameOutput("You carefully step onto the log, feeling it wobble under your weight. You make it halfway when the log suddenly snaps, sending you tumbling into the cold water.");
+        scene.gameOutput("You carefully step onto the log, feeling it wobble under your weight. You make it halfway when the log suddenly snaps, sending you tumbling into the below zero degree water.");
+         player.die("It feels so cold when you die.", scene);
       }
     });
     this.addChoice(new Choice("Find a safe place to camp and rest") {
