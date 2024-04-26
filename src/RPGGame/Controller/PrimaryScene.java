@@ -11,8 +11,6 @@ public final class PrimaryScene extends JFrame {
     private JButton sendButton;
     private JTextArea gameTextArea;
     private JPanel textAreaPanel;
-    private JPanel statsPanel;
-    private JTextArea statsTextArea;
 
     private static String lastInput;
     private static final Object inputLock = new Object();
@@ -23,7 +21,8 @@ public final class PrimaryScene extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 synchronized (inputLock) { //synchronized to prevent simultaneous editing of text area --devin
                     lastInput = userInput.getText();
-                    gameTextAreaNewLine(userInput.getText());
+                    gameOutput(">>" + userInput.getText());
+                    gameOutput("");
                     userInput.setText("");
                     inputLock.notifyAll();
                 }
@@ -47,7 +46,7 @@ public final class PrimaryScene extends JFrame {
         return temp;
     }
 
-    public void gameTextAreaClear() { //clears text area --devin
+    public void gameOutputClear() { //clears text area --devin
         SwingUtilities.invokeLater(() -> {
             gameTextArea.setText("");
         });
@@ -63,12 +62,12 @@ public final class PrimaryScene extends JFrame {
             return input;
         }
     }
-    public void gameTextAreaNewLine(String text) { //adds new line of text to UI text area --devin
+    public void gameOutput(String text) { //adds new line of text to UI text area --devin
         if (gameTextArea == null) {
             System.out.println("gameTextArea is null.");
         } else {
             SwingUtilities.invokeLater(() -> {
-                gameTextArea.append(">> " + text + "\n");
+                gameTextArea.append(text.replace("\n", " ") + "\n"); // replace \n with spaces so programmers can use text blocks to edit events.
                 gameTextArea.revalidate();
                 gameTextArea.repaint();
             });

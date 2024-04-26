@@ -15,13 +15,13 @@ public class Player {
 
 
     public void die(String message, PrimaryScene scene) {
-        scene.gameTextAreaNewLine("---=== YOU DIED! ===---\n" + message + "\nEnter 1 to play again.");
+        scene.gameOutput("---=== YOU DIED! ===---\n" + message + "\nEnter 1 to play again.");
         while (true) {
             try {
                 String input = scene.waitForNewInput();
                 if (input.equals("1")){
-                    scene.gameTextAreaClear();
-                    new StartEvent().run(new Player(this.name),scene);
+                    scene.gameOutputClear();
+                    new StartEvent().run(new Player(this.name),scene, true);
                 }
                 System.exit(1);
             } catch (InterruptedException e) {
