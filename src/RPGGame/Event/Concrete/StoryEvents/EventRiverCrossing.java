@@ -1,5 +1,4 @@
 package RPGGame.Event.Concrete.StoryEvents;
-
 import RPGGame.Controller.PrimaryScene;
 import RPGGame.Player;
 import RPGGame.Event.Abstracts.Choice;
