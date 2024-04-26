@@ -1,5 +1,6 @@
 package RPGGame.Event.Abstracts;
 
+import RPGGame.Controller.PrimaryScene;
 import RPGGame.Player;
 
 public abstract class Choice {
@@ -11,6 +12,10 @@ public abstract class Choice {
         choosable = true;
     }
 
+    public String getText(){
+        return text;
+    }
+
     public void makeUnchoosable(){
         choosable = false;
     }
@@ -19,5 +24,5 @@ public abstract class Choice {
         return choosable;
     }
 
-    public abstract void execute(Player player);
+    public abstract void execute(Player player, PrimaryScene scene);
 }

@@ -5,35 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Merging and fixing issues">
+      <change afterPath="$PROJECT_DIR$/src/RPGGame/Controller/PrimaryScene.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RPGGame/Controller/PrimaryScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/GeneratedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RPGGame/Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/EventController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/InventoryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/OldSceneController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/SceneController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Enemy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Entity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Abstracts/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Entity/Concrete/EnemySpider.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Choice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Encounter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/GeneratedEvent.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartTransitionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/StartTransitionEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/TestEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Helper/DamageType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/EquippableItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/Helper/EquipmentType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/InvItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Abstracts/WeaponItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/EmptyEquipment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/IronChestplate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/RingofThorns.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/RunningShoes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/WitchHat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Item/Concrete/WoodenSword.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,18 +41,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "elorio0505"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;elorio0505&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/elorio0505/ProjectRPG.git",
-    "accountId": "3d8ba265-544b-4257-ac6f-e88ed878cae8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/elorio0505/ProjectRPG.git&quot;,
+    &quot;accountId&quot;: &quot;3d8ba265-544b-4257-ac6f-e88ed878cae8&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -87,7 +73,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "225",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "177",
     "git-widget-placeholder": "Small-Scope",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",

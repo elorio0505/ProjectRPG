@@ -1,21 +1,52 @@
 package RPGGame;
+import RPGGame.Controller.PrimaryScene;
+import RPGGame.Event.Concrete.StoryEvents.StartEvent;
 
+import java.util.ArrayList;
 public class Player {
     public String name;
 
+    private ArrayList<Items> items;
+
     public Player(String name) {
         this.name = name;
+        items = new ArrayList<Items>();
     }
 
-    public void die() {
-        System.out.println("---=== YOU DIED! ===---");
-        System.exit(1);
+
+    public void die(String message, PrimaryScene scene) {
+        scene.gameTextAreaNewLine("---=== YOU DIED! ===---\n" + message + "\nEnter 1 to play again.");
+        while (true) {
+            try {
+                String input = scene.waitForNewInput();
+                if (input.equals("1")){
+                    scene.gameTextAreaClear();
+                    new StartEvent().run(new Player(this.name),scene);
+                }
+                System.exit(1);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
-    public void die(String deathText) {
-        System.out.println("---=== YOU DIED! ===---");
-        System.out.println(deathText);
-        System.exit(1);
+    public void addItem(Items i){ //add item to inventory --devin
+        if (!items.contains(i)){
+            items.add(i);
+        }
     }
+
+    public boolean hasItem(Items i){ //check if player has item --devin
+        if (items.contains(i)){
+            return true;
+        } return false;
+    }
+
+    public void removeItem(Items i){ //remove item from inventory --devin
+        if (items.contains(i)){
+            items.remove(i);
+        }
+    }
+
 
 }

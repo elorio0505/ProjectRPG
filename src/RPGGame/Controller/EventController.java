@@ -1,5 +1,6 @@
 package RPGGame.Controller;
 
+import RPGGame.Event.Abstracts.GeneratedEvent;
 import RPGGame.Player;
 import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.Event;
@@ -31,21 +32,21 @@ public class EventController {
             new Choice("Continue Walking"){
 
                 @Override
-                public void execute(Player player) {
-                    EventController.createEvent(player);
+                public void execute(Player player, PrimaryScene scene) {
+                    EventController.createEvent();
                 }
             },
         new Choice("Examine the glint in the snow") {
             @Override
-            public void execute(Player player) {
+            public void execute(Player player, PrimaryScene scene) {
 
             }
         }
     };
 
 
-    public static StoryEvent createEvent(Player player) {
-        return null;
+    public static GeneratedEvent createEvent() {
+        return new GeneratedEvent();
 
     }
 
