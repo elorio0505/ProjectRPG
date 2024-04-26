@@ -15,7 +15,9 @@ public class Player {
 
 
     public void die(String message, PrimaryScene scene) {
-        scene.gameOutput("---=== YOU DIED! ===---\n" + message + "\nEnter 1 to play again.");
+        scene.gameOutput("---=== YOU DIED! ===---");
+        scene.gameOutput(message);
+        scene.gameOutput("Enter 1 to play again.");
         while (true) {
             try {
                 String input = scene.waitForNewInput();

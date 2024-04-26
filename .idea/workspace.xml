@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="added functionality to event system, slight modifications to the scene, and started writing the story.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/PrimaryScene.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/PrimaryScene.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Controller/PrimaryScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Controller/PrimaryScene.java" afterDir="false" />
-    </list>
+    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Added Scrollbar to GUI" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714153983894</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added Scrollbar to GUI">
+      <created>1714154852516</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714154852516</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +201,8 @@
     <MESSAGE value="Small changes based on other contributor's changes" />
     <MESSAGE value="Merging and fixing issues" />
     <MESSAGE value="added functionality to event system, slight modifications to the scene, and started writing the story." />
-    <option name="LAST_COMMIT_MESSAGE" value="added functionality to event system, slight modifications to the scene, and started writing the story." />
+    <MESSAGE value="Added Scrollbar to GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Scrollbar to GUI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
