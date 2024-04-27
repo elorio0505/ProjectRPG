@@ -8,6 +8,8 @@ public abstract class StoryEvent extends Event {
     private String eventText;
     private String reencounterText;
 
+    private boolean firstEncounter = true;
+
     public void setEventText(String eventText) {
         this.eventText = eventText;
     }
@@ -36,8 +38,13 @@ public abstract class StoryEvent extends Event {
         displayedChoices = new ArrayList<Choice>();
     }
 
+    public boolean isFirstEncounter() {
+        return firstEncounter;
+    }
+
     @Override
     public boolean run(Player player, PrimaryScene scene, boolean firstEncounter) {
+        this.firstEncounter = firstEncounter;
         if (firstEncounter) { // If this is marked as the first time this event is seen, then the inital introductory text is diplayed.
             scene.gameOutput(eventText);
         } else { // Otherwise, the shorter text is shown.

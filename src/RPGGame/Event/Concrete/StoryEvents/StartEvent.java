@@ -6,7 +6,7 @@ import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
 
 
-public class StartEvent extends StoryEvent {
+public class StartEvent extends StoryEvent { // --erica/devin
     //this event is the entry point into the story
     public StartEvent(){
         super();

@@ -1,13 +1,9 @@
 package RPGGame.Controller;
 
 import RPGGame.Player;
-import RPGGame.Event.Abstracts.Event;
 import RPGGame.Event.Concrete.StoryEvents.StartEvent;
 
-import javax.swing.*;
-import java.util.Scanner;
 
-// TODO build a basic loop that allows for testing
 public class GameController {
     static boolean gameRunning;
     private Player player;

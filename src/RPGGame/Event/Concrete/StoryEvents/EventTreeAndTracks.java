@@ -6,7 +6,7 @@ import RPGGame.Player;
 import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
 
-public class EventTreeAndTracks extends StoryEvent {
+public class EventTreeAndTracks extends StoryEvent { // --erica/devin
     EventTreeAndTracks(){
         super();
         this.setEventText("""
@@ -14,7 +14,7 @@ public class EventTreeAndTracks extends StoryEvent {
                 You grasp your belt for your radio but its not there. Your mind is foggy but you remember that you are a soldier,
                 though from the landscape, you know that whatever forces you fought for and against are long gone. The last thing you recall is a pale-blue flash, then darkness.
                 Doesn't matter anymore. You attempt to take stock of your surroundings, though the veil-like snowfall renders the task borderline pointless.
-                However, you spot a combat knife handle sticking out of a desiccated spruce tree a few feet from you. And a flashlight tucked under a pile of snow. 
+                However, you spot a combat knife handle sticking out of a desiccated spruce tree a few feet from you. And a flashlight tucked under a pile of snow.
                 On the other hand, you also spot huge prints in the ground, unlike any animal you have knowledge of.
                 """);
         this.setReencounterText("""
@@ -31,13 +31,13 @@ public class EventTreeAndTracks extends StoryEvent {
             @Override
             public void execute(Player player, PrimaryScene scene) {
                     if (!player.hasItem(Items.KNIFE)) {
-                        scene.gameOutput("You walk over to the spruce tree. You manage to shimmy the knife out of its flesh and attach it to your belt. You feel just a litte more secure.");
+                        scene.gameOutput("You walk over to the spruce tree. You manage to shimmy the knife out of its flesh and attach it to your belt. You feel just a little more secure.");
                         player.addItem(Items.KNIFE);
                     } else {
                         this.makeUnchoosable();
                     }
                     new EventTreeAndTracks().run(player, scene, false);
-                };
+                }
             }
         );
 
@@ -47,6 +47,10 @@ public class EventTreeAndTracks extends StoryEvent {
                 scene.gameOutput("Against your best judgement, you begin to follow the tracks. As you walk alongside them, you realize that they are easily four times the size of your feet, with sharp protrusions where phalanges would normally be. You hope this wasn't a mistake.");
                 if (player.hasItem(Items.KNIFE)) {
                     scene.gameOutput("The small combat knife at you waist is little reassurance.");
+                    new EventMooseFight().run(player, scene, true);
+                } else {
+                    scene.gameOutput("It can't be that bad.");
+                    new EventMooseFight().run(player, scene, true);
                 }
             }
         });
