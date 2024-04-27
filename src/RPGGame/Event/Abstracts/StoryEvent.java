@@ -4,7 +4,7 @@ import RPGGame.Player;
 import RPGGame.Controller.PrimaryScene;
 import java.util.ArrayList;
 
-public abstract class StoryEvent extends Event { // -- erica, devin
+public abstract class StoryEvent { // -- erica, devin
     private String eventText;
     private String reencounterText;
 
@@ -42,7 +42,6 @@ public abstract class StoryEvent extends Event { // -- erica, devin
         return firstEncounter;
     }
 
-    @Override
     public boolean run(Player player, PrimaryScene scene, boolean firstEncounter) {
         this.firstEncounter = firstEncounter;
         if (firstEncounter) { // If this is marked as the first time this event is seen, then the inital introductory text is diplayed.
@@ -78,5 +77,4 @@ public abstract class StoryEvent extends Event { // -- erica, devin
         }
         return true;
     }
-
 }
