@@ -31,12 +31,5 @@ public class EventSecretTunnel extends StoryEvent {
                 // Implement consequences of picking up the flashlight and entering the secret tunnel
             }
         });
-        this.addChoice(new Choice("Ignore the secret tunnel and continue exploring the cave") {
-            @Override
-            public void execute(Player player, PrimaryScene scene) {
-                scene.gameOutput("You decide to continue exploring the main cave, leaving the secret tunnel and the flashlight unexplored for now.");
-                // Implement consequences of ignoring the secret tunnel (e.g., missing out on hidden treasures or encounters)
-            }
-        });
     }
 }
