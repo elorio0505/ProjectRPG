@@ -27,7 +27,7 @@ public class EventCaveEntrance extends StoryEvent {
             public void execute(Player player, PrimaryScene scene) {
                 if (player.hasItem(Items.KNIFE)) {
                     scene.gameOutput("You are surrounded by the creatures, and a chaotic battle ensues. After a long hard fought, you killed all the mutant bats in the cave and continue on your journey");
-                    // Implement consequences of entering the cave and fighting the bats with the knife.
+                     new EventSecretTunnel().run(player, scene, false);
                 } else {
                     scene.gameOutput("Without a weapon, you are quickly overwhelmed by the swarm of bats.");
                     player.die("Swarm of mutant bats ate you alive", scene);
