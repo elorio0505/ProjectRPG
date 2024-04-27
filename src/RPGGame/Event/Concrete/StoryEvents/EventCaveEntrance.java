@@ -9,9 +9,7 @@ public class EventCaveEntrance extends StoryEvent {
     EventCaveEntrance(){
         super();
         this.setEventText("""
-                Success!! The river slowed down  you come across a dark cave entrance. The air around it is cool and damp, and you can hear the echo of water dripping from within.
-                There's an eerie feeling about the place, but something draws you toward it.
-                """);
+                Success!! The river slowed down and you were able to cross. You come across a dark cave entrance and bats start to fly out of the cave.
         this.setReencounterText("""
                 The cave entrance looms before you, its darkness inviting yet foreboding.
                 """);
