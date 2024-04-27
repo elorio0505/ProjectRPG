@@ -1,6 +1,6 @@
 package RPGGame;
 import RPGGame.Controller.PrimaryScene;
-import RPGGame.Event.Concrete.StoryEvents.StartEvent;
+import RPGGame.Event.Concrete.StoryEvents.EventStart;
 
 import java.util.ArrayList;
 public class Player {
@@ -23,7 +23,7 @@ public class Player {
                 String input = scene.waitForNewInput();
                 if (input.equals("1")){
                     scene.gameOutputClear();
-                    new StartEvent().run(new Player(this.name),scene, true);
+                    new EventStart().run(new Player(this.name),scene, true);
                 } else {
                     System.exit(1);
                 }

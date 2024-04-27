@@ -6,9 +6,9 @@ import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
 
 
-public class StartEvent extends StoryEvent { // --erica/devin
+public class EventStart extends StoryEvent { // --erica/devin
     //this event is the entry point into the story
-    public StartEvent(){
+    public EventStart(){
         super();
         this.setEventText("""
                         Your eyes flutter open, and a piercing white light breaches your eyes and burns your consciousness.

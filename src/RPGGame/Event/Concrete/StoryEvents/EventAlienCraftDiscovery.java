@@ -33,7 +33,7 @@ public class EventAlienCraftDiscovery extends StoryEvent { // --devin
                         String input = scene.waitForNewInput();
                         if (input.equals("1")){
                             scene.gameOutputClear();
-                            new StartEvent().run(new Player(player.name),scene, true);
+                            new EventStart().run(new Player(player.name),scene, true);
                         } else {
                             System.exit(1);
                         }

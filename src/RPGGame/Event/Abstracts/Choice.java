@@ -3,7 +3,7 @@ package RPGGame.Event.Abstracts;
 import RPGGame.Controller.PrimaryScene;
 import RPGGame.Player;
 
-public abstract class Choice {
+public abstract class Choice { //-- Erica
     String text;
     private boolean choosable;
 

@@ -4,7 +4,7 @@ import RPGGame.Player;
 import RPGGame.Controller.PrimaryScene;
 import java.util.ArrayList;
 
-public abstract class StoryEvent extends Event {
+public abstract class StoryEvent extends Event { // -- erica, devin
     private String eventText;
     private String reencounterText;
 

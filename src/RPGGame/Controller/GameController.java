@@ -1,10 +1,10 @@
 package RPGGame.Controller;
 
 import RPGGame.Player;
-import RPGGame.Event.Concrete.StoryEvents.StartEvent;
+import RPGGame.Event.Concrete.StoryEvents.EventStart;
 
 
-public class GameController {
+public class GameController { //-- erica
     static boolean gameRunning;
     private Player player;
     private PrimaryScene scene;
@@ -18,6 +18,6 @@ public class GameController {
         scene = new PrimaryScene();
         scene.start();
         gameRunning = true;
-        new StartEvent().run(player, scene, true);
+        new EventStart().run(player, scene, true);
     }
 }
