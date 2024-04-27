@@ -14,11 +14,11 @@ public class EventTreeAndTracks extends StoryEvent {
                 You grasp your belt for your radio but its not there. Your mind is foggy but you remember that you are a soldier,
                 though from the landscape, you know that whatever forces you fought for and against are long gone. The last thing you recall is a pale-blue flash, then darkness.
                 Doesn't matter anymore. You attempt to take stock of your surroundings, though the veil-like snowfall renders the task borderline pointless.
-                However, you spot a combat knife handle sticking out of a desiccated spruce tree a few feet from you.
+                However, you spot a combat knife handle sticking out of a desiccated spruce tree a few feet from you. And a flashlight tucked under a pile of snow. 
                 On the other hand, you also spot huge prints in the ground, unlike any animal you have knowledge of.
                 """);
         this.setReencounterText("""
-                Armed qith the knife, maybe you'll have a chance against whatever abomination made those tracks.
+                Armed with the knife, maybe you'll have a chance against whatever abomination made those tracks.
                 """);
         this.addChoice(new Choice("Grab the knife") {
             @Override
@@ -40,6 +40,27 @@ public class EventTreeAndTracks extends StoryEvent {
                 };
             }
         );
+
+        this.addChoice(new Choice("Grab the flashlight") {
+    @Override
+    public void preExecute(Player player, PrimaryScene scene) {
+        if (player.hasItem(Items.FLASHLIGHT)) {
+            this.makeUnchoosable();
+        }
+    }
+
+    @Override
+    public void execute(Player player, PrimaryScene scene) {
+        if (!player.hasItem(Items.FLASHLIGHT)) {
+            scene.gameOutput("You find a flashlight tucked under a pile of snow.");
+            player.addItem(Items.FLASHLIGHT);
+        } else {
+            this.makeUnchoosable();
+        }
+        new EventTreeAndTracks().run(player, scene, false);
+    };
+});
+
         this.addChoice(new Choice("Follow the animal tracks") {
             @Override
             public void execute(Player player, PrimaryScene scene) {
