@@ -19,8 +19,8 @@ public class EventSecretTunnel extends StoryEvent {
         this.addChoice(new Choice("Enter the secret tunnel") {
             @Override
             public void execute(Player player, PrimaryScene scene) {
-                scene.gameOutput("You enter the secret tunnel, the sound of rushing water fading behind you as you venture into the unknown depths of the cave system.");
-                // Implement consequences of entering the secret tunnel (e.g., discovering hidden treasures, encountering new enemies)
+                scene.gameOutput("You enter the secret tunnel, the sound of rushing water fading behind you. And you fall into of the cave system.");
+                
             }
         });
         this.addChoice(new Choice("Pick up the flashlight and enter the secret tunnel") {
