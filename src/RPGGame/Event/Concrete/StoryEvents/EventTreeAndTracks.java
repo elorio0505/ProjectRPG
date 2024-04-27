@@ -41,26 +41,6 @@ public class EventTreeAndTracks extends StoryEvent {
             }
         );
 
-        this.addChoice(new Choice("Grab the flashlight") {
-    @Override
-    public void preExecute(Player player, PrimaryScene scene) {
-        if (player.hasItem(Items.FLASHLIGHT)) {
-            this.makeUnchoosable();
-        }
-    }
-
-    @Override
-    public void execute(Player player, PrimaryScene scene) {
-        if (!player.hasItem(Items.FLASHLIGHT)) {
-            scene.gameOutput("You find a flashlight tucked under a pile of snow.");
-            player.addItem(Items.FLASHLIGHT);
-        } else {
-            this.makeUnchoosable();
-        }
-        new EventTreeAndTracks().run(player, scene, false);
-    };
-});
-
         this.addChoice(new Choice("Follow the animal tracks") {
             @Override
             public void execute(Player player, PrimaryScene scene) {
