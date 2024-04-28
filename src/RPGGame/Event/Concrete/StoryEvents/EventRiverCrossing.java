@@ -24,7 +24,7 @@ public class EventRiverCrossing extends StoryEvent {
       @Override 
       public void execute(Player player, PrimaryScene scene) {
         scene.gameOutput("You decide to set up camp for the night, hoping the river will be safe to cross in the morning.");
-        new EventCaveEntrance().run(player, scene, false);
+        new EventCaveEntrance().run(player, scene, true);
       }
     });
   }
