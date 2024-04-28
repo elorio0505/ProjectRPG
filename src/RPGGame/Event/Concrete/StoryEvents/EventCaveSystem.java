@@ -20,7 +20,7 @@ public class EventLostCave extends StoryEvent {
             @Override
             public void execute(Player player, PrimaryScene scene) {
                 scene.gameOutput("You begin to explore the left path of the cave, hoping to find an exit. The moss-covered walls and eerie silence make your journey unsettling.");
-                new EventCaveSystemLeft().run(player, scene, true);
+                new EventGlowingCaveSystem().run(player, scene, true);
             }
         });
 
