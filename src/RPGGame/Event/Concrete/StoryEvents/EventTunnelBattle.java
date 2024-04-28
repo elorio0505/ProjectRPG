@@ -7,7 +7,7 @@ import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
 
 public class EventTunnelBattle extends StoryEvent {
-    EventCaveBeastBattle(){
+    EventTunnelBattle(){
         super();
         this.setEventText("""
                 As you make your way through the secret tunnel, you see a bright light near the end. But a low growl echoing comes from the shadows. Suddenly, a massive beast emerges, its eyes gleaming with malice.
@@ -19,9 +19,10 @@ public class EventTunnelBattle extends StoryEvent {
         this.addChoice(new Choice("Fight the cave beast") {
             @Override
             public void execute(Player player, PrimaryScene scene) {
-                 if (player.hasItem(Items.KNIFE)){
+                if (player.hasItem(Items.KNIFE)) {
                     scene.gameOutput("You fight off the beast and it slowly crawls away from the damages you caused. You exit the secret tunnel and a snow-laden forest comes your to your path. Your heart races as you see a moose walk by. With its limbs of a spider, all made from gleaming, cold metal ");
                     new EventSnowyRidge().run(player, scene, true);
+                }
             }
         });
         this.addChoice(new Choice("Try to evade the cave beast and find another way around") {
