@@ -4,27 +4,44 @@ import RPGGame.Player;
 import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
 
-public class EventRiverCrossing extends StoryEvent {
-  EventRiverCrossing() {
+public class EventCaveSystemLeft extends StoryEvent {
+  EventCaveSystemLeft() {
     super();
     this.setEventText(""" 
-            You come across a wide river blocking your path. The current is strong, and the water looks icy cold. You can see a fallen log that spans the river, but it looks old and rotten. On the other side, you spot what seems to be a shortcut to your destination.
+            As you are walking down the dark path, a rock stops you in your tracks.
             """);
     this.setReencounterText("""
-            The river still rages in front of you, and the log remains the only visible way across.
+            You believe that if you move this rock, you can continue your way onto the path.
             """);
-    this.addChoice(new Choice("Attempt to cross the log") {
+           this.addChoice(new Choice("Move the rock") 
+            @Override
+            public void execute(Player player, PrimaryScene scene) {
+                scene.gameOutput("You were sucessful moving the big rock out of the way and continue on'");
+                scene.gameOutput("The path is a dead end and decide to turn back. However, the rock you just moved kept ahold of the cave system entirely. And all the rocks fall to the ground covering up the exit. You try to move the rocks but they are too compact together to move");
+                scene.gameOutput("Unfortunately your stuck in this cave forever!");
+                scene.gameOutput("---===BAD ENDING===---");
+                scene.gameOutput("Enter 1 to play again.");
+                while (true) {
+                    try {
+                        String input = scene.waitForNewInput();
+                        if (input.equals("1")){
+                            scene.gameOutputClear();
+                            new EventStart().run(new Player(player.name),scene, true);
+                        } else {
+                            System.exit(1);
+                        }
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            }
+        });
+    
+    this.addChoice(new Choice("Go back to the cave system") {
       @Override 
       public void execute(Player player, PrimaryScene scene) {
-        scene.gameOutput("You carefully step onto the log, feeling it wobble under your weight. You make it halfway when the log suddenly snaps, sending you tumbling into the below zero degree water.");
-         player.die("It feels so cold when you die.", scene);
-      }
-    });
-    this.addChoice(new Choice("Find a safe place to camp and rest") {
-      @Override 
-      public void execute(Player player, PrimaryScene scene) {
-        scene.gameOutput("You decide to set up camp for the night, hoping the river will be safe to cross in the morning.");
-        new EventCaveEntrance().run(player, scene, false);
+        scene.gameOutput("You decide to go back since you cannot move the rock.");
+        new EventCaveSystem().run(player, scene, true);
       }
     });
   }
