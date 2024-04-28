@@ -4,11 +4,11 @@ import RPGGame.Player;
 import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
 
-public class EventCaveSystemLeft extends StoryEvent {
-  EventCaveSystemLeft() {
+public class EventGlowingCaveSystem extends StoryEvent {
+  EventGlowingCaveSystem() {
     super();
     this.setEventText(""" 
-            As you are walking down the dark path, a rock stops you in your tracks.
+            As you are walking down the glowing moss path, a rock stops you in your tracks.
             """);
     this.setReencounterText("""
             You believe that if you move this rock, you can continue your way onto the path.
@@ -41,7 +41,7 @@ public class EventCaveSystemLeft extends StoryEvent {
       @Override 
       public void execute(Player player, PrimaryScene scene) {
         scene.gameOutput("You decide to go back since you cannot move the rock.");
-        new EventCaveSystem().run(player, scene, true);
+        new EventCavEntrance().run(player, scene, true);
       }
     });
   }
