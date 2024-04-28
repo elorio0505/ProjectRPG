@@ -59,7 +59,7 @@ public class EventTreeAndTracks extends StoryEvent { // --erica/devin
             public void execute(Player player, PrimaryScene scene) {
                 scene.gameOutput("Whatever beast left those tracks, you do not want to find out. ");
                 scene.gameOutput("You decide to change your course and head in a different direction.");
-                new EventRiverCrossing().run(player, scene, false);
+                new EventRiverCrossing().run(player, scene, true);
             }
         });
     }
