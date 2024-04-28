@@ -37,7 +37,7 @@ public class EventGlowingCaveSystem extends StoryEvent {
             }
         });
     
-    this.addChoice(new Choice("Go back to the cave system") {
+    this.addChoice(new Choice("Go back to the cave entrance") {
       @Override 
       public void execute(Player player, PrimaryScene scene) {
         scene.gameOutput("You decide to go back since you cannot move the rock.");
