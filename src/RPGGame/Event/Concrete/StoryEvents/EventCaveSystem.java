@@ -14,9 +14,9 @@ public class EventLostCave extends StoryEvent {
                 The cave is eerily quiet, and your only source of light is a dimly glowing moss on the walls. You must find a way out before it's too late.
                 """);
         this.setReencounterText("""
-                The cave's twists and turns seem endless. But there's two distinct paths with dimly glowing moss. What will you do?
+                The cave's twists and turns seem endless. But there's one distinct path with dimly glowing moss. What will you do?
                 """);
-        this.addChoice(new Choice("Search the left path of the cave") {
+        this.addChoice(new Choice("Search the glowing moss path of the cave") {
             @Override
             public void execute(Player player, PrimaryScene scene) {
                 scene.gameOutput("You begin to explore the left path of the cave, hoping to find an exit. The moss-covered walls and eerie silence make your journey unsettling.");
@@ -24,14 +24,6 @@ public class EventLostCave extends StoryEvent {
             }
         });
 
-        this.addChoice(new Choice("Search the right path of the cave") {
-            @Override
-            public void execute(Player player, PrimaryScene scene) {
-                scene.gameOutput("You begin to explore the right path cave, hoping to find an exit. The moss-covered walls and eerie silence make your journey unsettling.");
-                new EventCaveSystemRight().run(player, scene, true);
-            }
-        });
-      
         this.addChoice(new Choice("Scream for help") {
             @Override
             public void execute(Player player, PrimaryScene scene) {
