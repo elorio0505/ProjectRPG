@@ -19,7 +19,7 @@ public class EventSecretTunnel extends StoryEvent {
         this.addChoice(new Choice("Enter the secret tunnel") {
             @Override
             public void execute(Player player, PrimaryScene scene) {
-                scene.gameOutput("You enter the secret tunnel, the sound of rushing water fading behind you. And you fall into of the cave system.");
+                scene.gameOutput("You enter the secret tunnel, the sound of rushing water fading behind you. And you fall into a hole leading down to a cave system.");
                 new EventCaveSystem().run(player, scene, false);
                 
             }
@@ -27,7 +27,7 @@ public class EventSecretTunnel extends StoryEvent {
         this.addChoice(new Choice("Pick up the flashlight and enter the secret tunnel") {
             @Override
             public void execute(Player player, PrimaryScene scene) {
-                scene.gameOutput("You pick up the flashlight and turn it on, its beam cutting through the darkness. With the flashlight in hand, you enter the secret tunnel, ready to uncover its mysteries.");
+                scene.gameOutput("You pick up the flashlight and turn it on, its beam cutting through the darkness. With the flashlight in hand, you enter the secret tunnel and you jump over the hole and continue your quest.");
                 player.addItem(Items.FLASHLIGHT);
                 new EventTunnelBattle().run(player, scene, false);
             }
