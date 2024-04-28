@@ -23,7 +23,7 @@ public class EventTunnelBattle extends StoryEvent {
                     scene.gameOutput("You fight off the beast and it slowly crawls away from the damages you caused. You exit the secret tunnel and a snow-laden forest comes your to your path. Your heart races as you see a moose walk by. With its limbs of a spider, all made from gleaming, cold metal ");
                     new EventSnowyRidge().run(player, scene, true);
             }
-        });Wi
+        });
         this.addChoice(new Choice("Try to evade the cave beast and find another way around") {
             @Override
             public void execute(Player player, PrimaryScene scene) {
