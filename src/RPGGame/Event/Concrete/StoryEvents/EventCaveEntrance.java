@@ -1,36 +1,36 @@
-package RPGGame.Event.Concrete.StoryEvents;
+package RPGGame.Event.Concrete.StoryEvents;             /* Import necessary classes and packages */
 import RPGGame.Items;
 import RPGGame.Controller.PrimaryScene;
 import RPGGame.Player;
 import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
 
-public class EventCaveEntrance extends StoryEvent {
-    EventCaveEntrance() {
+public class EventCaveEntrance extends StoryEvent {    /* Class to handle the event of cave entrance */ 
+    EventCaveEntrance() {                            /* Constructor for the event */
         super();
         this.setEventText("""
                 Success!! The river slowed down and you were able to cross. The air around it is cool and damp, and you can hear the echo of water dripping from within.
                 There's an eerie feeling about the place, but something draws you toward it.
-                """);
+                """);                        /* Setting the introductory text for the event */
         this.setReencounterText("""
                 The cave entrance looms before you, its darkness inviting yet foreboding. The sound of mutant bats echoes from within and they start to attack you!
                 """);
-        this.addChoice(new Choice("Go back to your camp") {
+        this.addChoice(new Choice("Go back to your camp") {        /* Adding a choice where the player can go back to camp */
             @Override
             public void execute(Player player, PrimaryScene scene) {
                 scene.gameOutput("You run back to your camp you made by the river, however the mutant bats follow you and swarm you.");
-                player.die("Swarm of mutant bats ate you alive", scene);
+                player.die("Swarm of mutant bats ate you alive", scene);        /* Player dies and re-enters scene */
             }
         });
-        this.addChoice(new Choice("Enter the cave and fight the mutant bats") {
+        this.addChoice(new Choice("Enter the cave and fight the mutant bats") {      /* Adding a choice where the player can enter the cave and fight the mutant bats */
             @Override
             public void execute(Player player, PrimaryScene scene) {
-                if (player.hasItem(Items.KNIFE)) {
+                if (player.hasItem(Items.KNIFE)) {                                   /* Check before the choice is executed to ensure the player has a knife */
                     scene.gameOutput("You are surrounded by the creatures, and a chaotic battle ensues. After a long hard fought, you killed all the mutant bats in the cave and continue on your journey");
-                     new EventSecretTunnel().run(player, scene, true);
+                     new EventSecretTunnel().run(player, scene, true);                /* Initiates a new event as the and takes user to next scene. Player heads to secret tunnel. */
                 } else {
                     scene.gameOutput("Without a weapon, you are quickly overwhelmed by the swarm of bats.");
-                    player.die("Swarm of mutant bats ate you alive", scene);
+                    player.die("Swarm of mutant bats ate you alive", scene);            /* Player dies and re-enters scene */
                 }
             }
         });
