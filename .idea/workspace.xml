@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Fixing syntax error from previous commmit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/EventCaveSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/EventCaveSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/EventGlowingCaveSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Concrete/StoryEvents/EventGlowingCaveSystem.java" afterDir="false" />
+    <list default="true" id="bde3ee0c-fc84-4132-b499-1218cbd51d3a" name="Changes" comment="Fixed code (STOP COMMITTING WITHOUT RUNNING!!)">
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Event/Abstracts/StoryEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RPGGame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RPGGame/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714314776732</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed code (STOP COMMITTING WITHOUT RUNNING!!)">
+      <created>1714499955686</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714499955686</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +244,8 @@
     <MESSAGE value="credits" />
     <MESSAGE value="removed redundant Event superclass" />
     <MESSAGE value="Fixing syntax error from previous commmit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing syntax error from previous commmit" />
+    <MESSAGE value="Fixed code (STOP COMMITTING WITHOUT RUNNING!!)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed code (STOP COMMITTING WITHOUT RUNNING!!)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

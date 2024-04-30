@@ -10,6 +10,12 @@ public abstract class StoryEvent { // -- erica, devin
 
     private boolean firstEncounter = true;
 
+    public StoryEvent() {
+        choices = new ArrayList<Choice>();
+        displayedChoices = new ArrayList<Choice>();
+    }
+
+    // sets text
     public void setEventText(String eventText) {
         this.eventText = eventText;
     }
@@ -21,21 +27,9 @@ public abstract class StoryEvent { // -- erica, devin
     private ArrayList<Choice> choices;
     private ArrayList<Choice> displayedChoices;
 
+    // add choices to event
     public void addChoice(Choice c) {
         choices.add(c);
-    }
-
-    public String getEventText() {
-        return eventText;
-    }
-
-    public ArrayList<Choice> getChoices() {
-        return choices;
-    }
-
-    public StoryEvent() {
-        choices = new ArrayList<Choice>();
-        displayedChoices = new ArrayList<Choice>();
     }
 
     public boolean isFirstEncounter() {

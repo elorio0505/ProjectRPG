@@ -14,7 +14,7 @@ public class Player {
     }
 
 
-    public void die(String message, PrimaryScene scene) {
+    public void die(String message, PrimaryScene scene) { //run when player dies, handles player death-- noah, erica
         scene.gameOutput("---=== YOU DIED! ===---");
         scene.gameOutput(message);
         scene.gameOutput("Enter 1 to play again.");
@@ -33,19 +33,19 @@ public class Player {
         }
     }
 
-    public void addItem(Items i){ //add item to inventory --devin
+    public void addItem(Items i){ //add item to inventory --noah
         if (!items.contains(i)){
             items.add(i);
         }
     }
 
-    public boolean hasItem(Items i){ //check if player has item --devin
+    public boolean hasItem(Items i){ //check if player has item --noah
         if (items.contains(i)){
             return true;
         } return false;
     }
 
-    public void removeItem(Items i){ //remove item from inventory --devin
+    public void removeItem(Items i){ //remove item from inventory --noah
         if (items.contains(i)){
             items.remove(i);
         }
