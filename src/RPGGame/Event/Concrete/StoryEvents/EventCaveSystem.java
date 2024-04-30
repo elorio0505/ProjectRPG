@@ -5,7 +5,7 @@ import RPGGame.Player;
 import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
 
-public class EventLostCave extends StoryEvent {
+public class EventCaveSystem extends StoryEvent {
     EventLostCave(){
         super();
         this.setEventText("""
