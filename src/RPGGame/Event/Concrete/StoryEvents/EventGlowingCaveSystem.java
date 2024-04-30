@@ -10,10 +10,10 @@ public class EventGlowingCaveSystem extends StoryEvent {    /* Class to handle t
     this.setEventText(""" 
             As you are walking down the glowing moss path, a rock stops you in your tracks.
             """);
-    this.setReencounterText("""     /* Setting the introductory text for the event */
+    this.setReencounterText("""
             You believe that if you move this rock, you can continue your way onto the path.
             """);
-           this.addChoice(new Choice("Move the rock")    /* Adding a choice where the player can move the rock */
+           this.addChoice(new Choice("Move the rock") {    /* Adding a choice where the player can move the rock */
             @Override
             public void execute(Player player, PrimaryScene scene) {    /* Define what happens when this choice is executed */
                 scene.gameOutput("You were sucessful moving the big rock out of the way and continue on'");
@@ -41,7 +41,7 @@ public class EventGlowingCaveSystem extends StoryEvent {    /* Class to handle t
       @Override 
       public void execute(Player player, PrimaryScene scene) {
         scene.gameOutput("You decide to go back since you cannot move the rock.");
-        new EventCavEntrance().run(player, scene, true);      /* Adding a choice to go back to the cave entrance */
+        new EventCaveEntrance().run(player, scene, true);      /* Adding a choice to go back to the cave entrance */
       }
     });
   }

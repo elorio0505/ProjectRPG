@@ -6,7 +6,7 @@ import RPGGame.Event.Abstracts.Choice;
 import RPGGame.Event.Abstracts.StoryEvent;
 
 public class EventCaveSystem extends StoryEvent {
-    EventLostCave(){
+    EventCaveSystem(){
         super();
         this.setEventText("""
                 You slip on loose gravel and tumble into a dark cavern. After regaining your bearings, you realize you are in a vast cave system, with no immediate way out.
