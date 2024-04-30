@@ -4,19 +4,19 @@ import RPGGame.Controller.PrimaryScene;
 import RPGGame.Player;
 
 public abstract class Choice { //-- Erica
-    String text;
-    private boolean choosable;
+    String text;     // Text description of the choice
+    private boolean choosable;    // Private boolean to determine if the choice is currently selectable
 
-    public Choice(String text) {
+    public Choice(String text) {    // Set the text description of the choice
         this.text = text;
         choosable = true;
     }
 
-    public String getText(){
+    public String getText(){        // Returns the text description of this choice
         return text;
     }
 
-    public void makeUnchoosable(){
+    public void makeUnchoosable(){    //Makes this choice as unselectable
         choosable = false;
     }
 
